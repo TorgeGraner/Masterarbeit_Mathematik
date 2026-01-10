@@ -1,0 +1,23 @@
+Betrachte erneut die exakte Folge
+\[0\longrightarrow\Omega_n^{\text{\tiny Fast}}\mathop{\rightarrowtail}^cP^n\mathop{\twoheadrightarrow}^{\partial}\partial P^n\longrightarrow 0\,.\]
+Den Korollaren \ref{cor:double_odd_zero} und \ref{cor:single_odd_zero} zufolge gilt \(P^{4m+1}=P^{4m+3}=0\), sodass sich direkt \(\partial P^{4m+1}=\partial P^{4m+3}=0\) ergibt.
+
+\subsubsection{Die Berechnung von \(\partial P_{4m}\)}
+    F\"ur \({4m\geq8}\) gelten \(P^{4m}\cong8\mathbb{Z}\) gem\"a\ss{} Satz \ref{thm:sign_image} und \(\Omega_{4m}^{\text{\tiny Fast}}\cong\abs{t_m}\cdot\mathbb{Z}\) gem\"a\ss{} Satz \ref{thm:almost_sign_image}. Somit existiert eine exakte Folge
+    \[0\to\abs{t_m}\cdot\mathbb{Z}\rightarrowtail8\mathbb{Z}\twoheadrightarrow\partial P^{4m}\to0\,,\]
+    und es ergibt sich
+    \[\partial P^{4m}\cong8\mathbb{Z}/\abs{t_m}\cdot\mathbb{Z}\,.\]
+    Folglich besitzt \(\partial P^{4m}\) f\"ur \(4m\geq8\) die Kardinalit\"at
+    \[\frac{\abs{t_m}}{8}=2^{2m-3}\left(2^{2m-1}-1\right)\left(3+(-1)^{m+1}\right)\,\text{\upshape Z\"ahler}\left(\frac{\abs{B_{2m}}}{4m}\right)\,.\]
+    Beispielsweise ist wegen \(B_4=-\nicefrac{1}{30}\) 
+    \begin{equation}\label{eq:partialp8}
+        \frac{\abs{t_8}}{8}=2^1\left(2^3-1\right)\left(3+(-1)^3\right)\,\text{\upshape Z\"ahler}\left(\frac{1}{4\cdot30}\right)=28\,,
+    \end{equation}
+    also \(\partial P^8\cong\mathbb{Z}_{28}\).
+
+\subsubsection{Die Berechnung von \(\partial P_{4k+2}\)}
+    Gem\"a\ss{} Satz \ref{thm:kerv_iso} gilt \({P^{4k+2}\cong\mathbb{Z}_2}\) f\"ur \(4m+2\notin\{6,14\}\), sodass in diesen F\"allen \({\partial P^{4k+2}\cong\mathbb{Z}_2}\) oder \({\partial P^{4k+2}=0}\) gelten muss. Eine Erweiterung der Definition der Kervaire-Invariante (siehe Levine) oder ein direkter Beweis (siehe Kosinski) zeigt \(\partial P^{4k+2}=0\) f\"ur \(4k+2\in\{2,6,14\}\). Es folgt \(\Omega_{4k+2}^{\text{\tiny Fast}}\subseteq\mathbb{Z}_2\). Die Frage nach der Kardinalit\"at von \(\Omega_n^{\text{\tiny Fast}}\) ist betr\"achtlich schwieriger. Browder zeigte 1969 \cite{browder1969general}, dass geschlossene Mannigfaltigkeiten mit Kervaire-Invariante eins lediglich in Dimensionen der Form \(n=2^k-2\), und zwar genau dann existieren, wenn ein gewisses Element der Adams-Spektralfolge ein \(\theta_{k-1}\in\Pi_{2^k-2}\) repr\"asentiert. Weiter konnte 2009 von Hill et al. \cite{hill2009nonexistence} gezeigt werden, dass hierbei auch alle \(k\geq8\) ausgeschlossen werden k\"onnen, sodass lediglich die F\"alle \(n\in\{30,62,126\}\) verblieben. Nun existiert in Dimensionen \(n=30\) eine explizite Konstruktion einer derartigen Mannigfaltigkeit von Jones \cite{jones1978extended}, und in Dimension \(n=62\) ein Existenzbeweis von \(\theta_5\) von Barratt et al. \cite{barratt1984relations}. In einem noch nicht verifizierten Pre-Print von Lin et al. aus dem Jahr 2025 \cite{lin2025last} wird die Existenz von \(\theta_6\) gezeigt. Werden diese S\"atze angenommen, folgt
+    \[\partial P^{4k+2}\cong\begin{cases}
+        0 & 4k+2\in\{2,6,14,30,62,126\}\\
+        \mathbb{Z}_2 & \text{sonst}
+    \end{cases}\,.\]

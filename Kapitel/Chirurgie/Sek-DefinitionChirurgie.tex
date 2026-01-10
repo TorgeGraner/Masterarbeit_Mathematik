@@ -1,0 +1,52 @@
+Sei \(\mathcal{S}^i\hookrightarrow\mathring{\mathcal{M}}\) eine eingebettete Sph\"are mit trivialem Normalenb\"undel. Die letzte Forderung bedeutet hierbei, dass \({N\mathcal{S}\cong\underline{\mathbb{R}}^{j+1}}\) gilt, sodass eine Tubenumgebung von \(\mathcal{S}\) zu \(\underline{\mathbb{R}}^{j+1}\) isomorph ist. Als Anklebeabbildung sei also eine Einbettung \(\Phi\colon\underline{\mathbb{R}}^{j+1}\hookrightarrow\mathring{\mathcal{M}}\) gew\"ahlt. Da das Normalenb\"undel der eingebetteten Sph\"are \({\mathbb{S}^i\times\{0\}^j\subset\mathbb{S}^n}\) ebenso trivial ist, lassen sich \(\mathcal{M}\) und \(\mathbb{S}^n\) entlang \(\mathcal{S}\cong\mathbb{S}^i\) verkleben. Die entstehende Mannigfaltigkeit gehe durch \textbf{Chirurgie} an \(\mathcal{S}\) aus \(\mathcal{M}\) hervor. Die g\"angigste Bezeichnung ist hierbei wohl \(\chi(\mathcal{M},\Phi)\). Im Folgenden sei stattdessen
+\[\mathcal{M}\multimap\mathbb{S}^i:=\mathcal{M}\mathop{+}^{\Phi}\mathbb{S}^n=\chi(\mathcal{M},\Phi)\]
+eben jene Chirurgie.
+\section{Verbindung zu Henkeln}
+    Ein nah mit Chirurgie verbundener Vorgang ist das Anbringen eines Henkels. Sei hierzu \(\mathcal{W}^{n+1}\) eine Mannigfaltigkeit und \(\mathcal{S}^i\hookrightarrow\partial\mathcal{W}\) eine eingebettete Sph\"are mit trivialem Normalenb\"undel in \(\mathcal{W}\). Erneut ist \(N\mathcal{S}\cong\underline{\mathbb{R}}^{n+1}\) (nicht \(\underline{\mathbb{R}}^n\times\mathbb{R}_+\)). Eine Tubenumgebung ist also eine Einbettung \(\tilde{\Phi}\colon\underline{\mathbb{R}}^n\times\mathbb{R}_+\hookrightarrow\mathcal{W}\), die eine Tubenumgebung \(\Phi\colon\underline{\mathbb{R}}^n\hookrightarrow\partial\mathcal{W}\) fortsetzt. Analoges gilt f\"ur \(\mathbb{S}^i\subset\partial\mathbb{D}^{n+1}\). Die Verklebung 
+    \[\mathcal{W}\multimap\mathbb{D}^{i+1}:=\mathcal{W}\mathop{+}^{\tilde{\Phi}}\mathbb{D}^{n+1}\,,\]
+    gehe durch das \textbf{Anbringen eines Henkels} an \(\mathcal{S}\) aus \(\mathcal{W}\) hervor. Dieser Vorgang geschieht immer am Rand einer Mannigfaltigkeit. Naheliegenderweise gilt
+    \[\partial(\mathcal{W}\multimap\mathbb{D}^{i+1})=\partial(\mathcal{W}\mathop{+}^{\tilde{\Phi}}\mathbb{D}^{n+1})\cong\partial\mathcal{W}\mathop{+}^{\Phi}\partial\mathbb{D}^{n+1}=\partial\mathcal{W}\multimap\mathbb{S}^i\,,\]
+    der Rand der Anbringung eines Henkels an \(\mathcal{W}\) ist also die Chirurgie an \(\partial\mathcal{W}\). Diese Konstruktion sei in Abbildung \ref{fig:surgery} verdeutlicht. Dies vereinfacht die Sitation f\"ur geschlossene Mannigfaltigkeiten \(\mathcal{M}\), da in diesem Fall \(\mathcal{M}\times\mathbb{I}\) eine \((n+1)\)-Mannigfaltikeit mit \(\partial\mathcal{W}\cong\mathcal{M}\sqcup(-\mathcal{M})\) ist. Es gilt also auch
+    \[\partial(\mathcal{M}\times\mathbb{I}\multimap\mathbb{D}^{i+1})\cong\mathcal{M}\sqcup-(\mathcal{M}\multimap\mathbb{S}^i)\]
+    sodass \(\mathcal{M}\multimap\mathbb{S}^i\) und \(\mathcal{M}\) kobordant sind. Der Trick die Chirurgie derart als Rand darzustellen vereinfacht einige \"Uber\-le\-gun\-gen. Es sei jedoch Obacht geboten, da \(\mathcal{M}\times\mathbb{I}\) f\"ur glatte Mannigfaltigkeiten \(\mathcal{M}\) mit nicht leerem Rand keine glatte Mannigfaltigkeit ergibt. Entlang der Strata \(\partial\mathcal{M}\times\partial\,\mathbb{I}\) l\"asst sich keine glatte Struktur angeben, die mit der glatten Struktur von \(\mathcal{M}\) \"ubereinstimmt. Da im Folgenden ledliglich Mannigfaltigkeiten \(\mathcal{M}\) betrachtet werden, deren Rand leer oder eine Homotopiesph\"are ist, kann dem folgenderma\ss en Abhilfe geschaffen werden.
+    \input{Kapitel/Chirurgie/Fig-HenkelUndChirurgie.tex}
+    \newpage
+    \begin{lemma}\label{lem:smooth_man}
+        Zu jeder Mannigfaltigkeit \(\mathcal{M}^n\) existiert eine Mannigfaltigkeit
+        \[\mathcal{W}^{n+1}\subseteq\mathcal{M}\times\mathbb{I}\quad\text{mit}\quad\partial\mathcal{W}\cong\mathcal{M}\mathop{+}^{\partial\mathcal{M}}\mathcal{M}\,.\]
+    \end{lemma}
+    \begin{proof}
+        Eine Kragenumgebung von \(\partial\mathcal{M}\) in \(\mathcal{M}\) kann zu einer topologischen Einbettung \(\partial\mathcal{M}\times\mathbb{R}_+^2\hookrightarrow\mathcal{M}\times\mathbb{I}\) fortgesetzt werden. Dann kann \(\mathbb{R}_+^2\) durch eine geeignete glatte Mannigfaltigkeit mit Rand ersetzt werden. Eine M\"oglichkeit diese zu definieren w\"are als jenes Gebiet \(Q\subseteq\mathbb{R}_+^2\), welches durch die Kurve \(\gamma\) abgegrenzt wird, die durch
+        \[\gamma(t):=\left(1+t^2\right)\left(\cos(g(t)),\sin(g(t))\right)\quad\text{mit}\quad g(t)=\frac{h\left(t+\frac{1}{2}\right)}{h\left(t+\frac{1}{2}\right)+h\left(\frac{1}{2}-t\right)}\]
+        und
+        \[h(t)=\begin{cases}
+            e^{-\frac{1}{x}} & x\geq0\\
+            0 & \text{sonst}
+        \end{cases}\]
+        definiert ist. Siehe hierzu Abbildung \ref{fig:smooth_man}. Bezeichne die resultierende Mannigfaltigkeit durch \(\mathcal{W}\). Der Rand dieser Gl\"attung ist gerade eine Gl\"attung von
+        \[\partial(\mathcal{M}\times\mathbb{I})=\partial\mathcal{M}\times\mathbb{I}\cup\mathcal{M}\times\partial\,\mathbb{I}\,.\]
+        Aus der Definition l\"asst sich erkennen, dass diese zu \(\mathcal{M}+_{\partial\mathcal{M}}\mathcal{M}\) diffeomorph ist.
+    \end{proof}
+    \begin{figure}
+        \centering
+        \includegraphics[scale = 2]{Kapitel/Chirurgie/geogebra-export.png}
+        \caption{Eine glatte Kurve, sodass das oben rechts berandete Gebiet eine glatte Mannigfaltigkeit mit Rand ist, die zum \(\mathbb{R}_+^2\) hom\"oomorph ist.}\label{fig:smooth_man}
+    \end{figure}
+    Sei \(\mathcal{W}\) gem\"a\ss{} Lemma \ref{lem:smooth_man}. Wird ein Henkel an dem Rand von \(\partial\mathcal{W}\) angebracht, ergibt sich
+    \[\partial\left(\mathcal{W}\multimap\mathbb{D}^{i+1}\right)\cong\mathcal{M}\mathop{+}^{\partial\mathcal{M}}\left(\mathcal{M}\multimap\mathbb{S}^i\right)\,.\]
+    Wenn \(\partial\mathcal{M}\) zus\"atzlich leer oder eine Homotopiesph\"are ist, folgt f\"ur \(0<i<n\) 
+    \[H_i(\partial\mathcal{W})\cong H_i(\mathcal{M})\oplus H_i(\mathcal{M})\,.\]
+    Diese Mannigfaltigkeit verh\"alt sich deshalb \"ahnlich genug zu \(\mathcal{M}\times\mathbb{I}\).
+
+\subsection{Kombinatorische Chirurgie}
+    Besonders im Rahmen homologischer \"Uberlegungen ist die glatte Struktur der Mannigfaltigkeit nicht vonn\"oten, sodass in diesem Fall eine topologisch \"aqui\-va\-len\-te und einfachere Notation genutzt werden kann. Sei eine glatte Einbettung \(\Phi\colon\mathbb{S}^i\times\mathbb{D}^{j+1}\hookrightarrow\mathring{\mathcal{M}}\) mit \(\mathcal{D}:=\im\Phi\) gegeben. Setze \(\mathcal{M}_0:=\mathcal{M}\setminus\mathring{\mathcal{D}}\) und betrachte das topologische Pushout
+    \[\mathcal{M}^{\prime}:=\mathcal{M}_0\cup_{\partial\mathcal{D}}\left(\mathbb{D}^{i+1}\times\mathbb{S}^j\right)\,.\]
+    Ebenso l\"asst sich das Anbringen eines Henkels an \(\mathcal{W}^{n+1}\) durch
+    \[\mathcal{W}+H^i:=\mathcal{W}\cup_{\mathcal{D}}\left(\mathbb{D}^{i+1}\times\mathbb{D}^{j+1}\right)\]
+    definieren. Die entstehende Mannigfaltigkeit sind hierbei hom\"oomorph zu ihren oberen glatten Definitionen (\cite{kosinski1992differential} Kapitel VI Proposition 8.1). 
+    
+    \subsubsection{Meridian und \"Aquator einer Chirurgie}
+        Diese Definition legt nahe, warum \(\mathbb{S}^i\times\mathbb{S}^j\) bei dem Untersuchen von einer Chirurgie eine wichtige Rolle spielt. F\"ur ein \(x\in\mathbb{S}^i\) und ein \(y\in\mathbb{S}^j\) sei \(\Phi\left(\{x\}\times\mathbb{S}^j\right)\) ein \textbf{Meridian} und \(\Phi\left(\mathbb{S}^i\times\{y\}\right)\) ein \textbf{\"Aquator}. 
+
+    \subsubsection{Kern und Kokern eines Henkels}
+        Der Anteil von \(\mathcal{W}\multimap\mathbb{D}^{i+1}\), der mit \(\mathbb{D}^{i+1}\times0\) korrespondiert hei\ss e \textbf{Kern} und der Anteil \(0\times\mathbb{D}^{j+1}\) hei\ss e \textbf{Kokern}. Der Rand des Kernes ist gerade die Anklebesph\"are, der Rand des Kokerns hei\ss e transversale Sph\"are. Diese Begriffe sind insbesondere im Rahmen des H-Kobordismus-Satzes wichtig.

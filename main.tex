@@ -1,0 +1,166 @@
+\documentclass[oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{units}    % useful for settings units, \unit[23]{m}
+\usepackage{nicefrac} % for setting fractions esp. within text, \nicefrac{km}{h}
+\usepackage[german]{babel}
+\usepackage{tikz}
+\usetikzlibrary{positioning, automata, arrows, patterns}
+\usepackage{tikz-3dplot}
+\usepackage{pgf, pgfplots}
+\pgfplotsset{compat=1.18} 
+\usepackage{algorithm, algorithmicx, algpseudocode} % Pseudocode
+\usepackage{amsmath, amssymb, amsthm} % definitions
+\usepackage{bbm}
+\usepackage{pict2e} % angle symbol
+\usepackage[pdfpagelabels,colorlinks,allcolors=black]{hyperref} % Hyperlink referencing
+\usepackage{subcaption} % subfigure captions
+\usepackage{bm} % Bold math letters
+\usepackage{tipa, stmaryrd} % eta symbol
+\usepackage{utfsym}
+\usepackage{multirow} % Multirow table
+\usepackage{booktabs} % Better tables
+\usepackage{csquotes}
+\usepackage{mleftright} % Fix left/right formatting
+\usepackage{xcolor}
+\usepackage[style=alphabetic]{biblatex}
+\bibliography{sources.bib}
+
+\definecolor{darkgreen}{RGB}{0, 100, 0}
+
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+\algnewcommand\AND{\textbf{and }}
+\algnewcommand\OR{\textbf{or }}
+\algnewcommand\NOT{\textbf{not }}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+%\renewcommand{\theta}{\vartheta}
+\renewcommand{\eta}{%
+    \raisebox{-0.7mm}[0.8\height][\width]{
+        \parbox{0.5mm}{
+            \makebox[0.1mm]{
+            \begin{tikzpicture}%
+                \draw node at (-0.04, 0) {\scalebox{0.9}{\textlhtlongi}}; 
+                \draw node at (0.09, -0.08) {\rotatebox[origin=c]{15}{\scalebox{1}[-1]{\(\Rbag\)}}};
+            \end{tikzpicture}%
+            }
+        }
+    }\hspace*{1pt}
+}
+
+\DeclareSymbolFont{myletters}{OML}{ztmcm}{m}{it}
+\DeclareMathSymbol{\uplambda}{\mathord}{myletters}{"15}
+\renewcommand{\lambda}{\uplambda}
+% Fix left/right formatting
+\renewcommand{\left}{\mleft}
+\renewcommand{\right}{\mright}
+\renewcommand{\ker}{\operatorname{Ker}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\dx}{\mathrm{d}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\abs{\abs{#1}}}
+\def\i{\boldsymbol{i}}
+\newcommand{\eqcl}[1]{[\,#1\,]}
+\newcommand{\overeq}[1]{\mathop{=}^{\text{\tiny #1}}}
+\newcommand{\overcong}[1]{\mathop{\cong}^{\text{\tiny #1}}}
+\newcommand{\overto}[1]{\mathop{\to}^{\text{\tiny #1}}}
+\newcommand{\surgery}{\,\usym{2702}\,}
+\newcommand{\commend}[1]{}
+
+\newtheoremstyle{break}
+  {\topsep}{\topsep}%
+  {\itshape}{}%
+  {\bfseries}{}%
+  {\newline}{}%
+\theoremstyle{break}
+\newtheorem{theorem}{Satz}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Korollar}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{definition}
+\newtheorem{example}{Beispiel}[section]
+\theoremstyle{definition}
+\newtheorem{remark}{Bemerkung}[section]
+    
+\theoremstyle{definition}
+
+\renewcommand\qedsymbol{q.e.d.}
+
+\begin{document}
+
+    \begin{titlepage}
+               
+        \begin{center}
+            \LARGE{\textsc{Institut für Mathematik}}
+            
+            \vfill
+            
+            \LARGE{\emph{Masterarbeit}}
+            
+            \vspace{8mm}
+            
+            \huge{\textbf{Eigenschaften der Menge der H-Kobordismusklassen von Homotopie-Sphären}}
+            
+            \vspace{8mm}
+            
+            \LARGE{Torge Graner}
+            
+            \vspace{32mm}
+            
+            \large{\today}
+            \vfill
+            
+            \begin{tabular}{ll}
+              \large
+              Erstgutachter: & \large Prof. Dr. math. Oliver Röndigs\\
+              \large
+              Zweitgutachter: & \large Prof. Dr. math. Markus Spitzweck
+            \end{tabular}
+        \end{center} 
+    \end{titlepage}
+
+    \tableofcontents
+    \thispagestyle{empty}
+
+    \chapter{Einleitung}
+        \input{Kapitel/Kap-Einleitung}
+
+    \chapter{Mannigfaltigkeiten}
+        \input{Kapitel/Kap-Mannigfaltigkeiten}
+
+    \chapter{Verklebung von Mannigfaltigkeiten}
+        \input{Kapitel/Kap-VerklebungVonMannigfaltigkeiten}
+     
+    \chapter{Etwas Homotopietheorie}
+        \input{Kapitel/Kap-Homotopietheorie}
+
+    \chapter{Chirurgie}
+        \input{Kapitel/Kap-Chirurgie.tex}
+
+    \chapter{Chirurgie in ungerader Dimension}
+        \input{Kapitel/Kap-DoppeltUngeradeDimension.tex}
+
+    \chapter{Die Berechnung von \texorpdfstring{\(P^{4m}\)}{TEXT}}
+        \input{Kapitel/Kap-DoppeltGeradeDimension.tex}
+
+    \chapter{Die Berechnung von \texorpdfstring{\(P^{4m+2}\)}{TEXT}}
+        \input{Kapitel/Kap-EinfachGeradeDimension.tex}
+
+    \chapter{Die Berechnung von \texorpdfstring{\(\Theta_n\)}{TEXT}}
+        \input{Kapitel/Kap-KervaireMilnorGruppe}
+
+    \appendix
+    
+    \chapter*{Appendix}
+    \refstepcounter{chapter}
+    \addcontentsline{toc}{chapter}{Appendix}
+    
+    \input{Kapitel/Appendix}
+    \printbibliography
+\end{document}

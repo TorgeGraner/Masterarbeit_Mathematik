@@ -1,0 +1,93 @@
+Da \(k\) gerade und die Schnittform symmetrisch ist, kann diese \"uber \(\mathbb{R}\) diagonalisiert werden. Sei \(n_+\) die Anzahl der positiven und \(n_-\) die Anzahl der negativen Eintr\"age einer Diagonalisierung. Die \textbf{Signatur} von \(\mathcal{M}\) sei definiert als \(\sigma(\mathcal{M}):=n_+-n_-\). F\"ur ungerade \(k\), also wenn die Schnittform schiefsymmetrisch ist, sind alle Eigenwerte komplex, sodass keine Diagonalisierung \"uber \(\mathbb{R}\) existieren kann. 
+\begin{theorem}\label{thm:sign_prop}
+    F\"ur kompakte, orientierte topologische Mannigfaltigkeiten \(\mathcal{M}^n\), \(\mathcal{N}^n\) gilt
+    \begin{itemize}
+        \item[i] F\"ur eine Mannigfaltigkeit \(\mathcal{W}^{4m+1}\) gilt \(\sigma(\partial\mathcal{W})=0\)
+        \item[ii] \(\sigma(\mathcal{M}\sqcup\mathcal{N})=\sigma(\mathcal{M}+\mathcal{N})=\sigma(\mathcal{M})+\sigma(\mathcal{N})\)
+        \item[iii] Es gilt \(\sigma(\mathcal{M}\times\mathcal{N})=\sigma(\mathcal{M})\sigma(\mathcal{N})\)
+        \item[iv] Die Signatur einer geraden, unimodularen Form teilt acht
+    \end{itemize}
+\end{theorem}
+\begin{proof}
+    \subsubsection{Behauptung \(i\)}
+        Aus Gleichung \ref{eq:ker_incl_dim} folgt
+        \[2\dim_{\mathbb{R}}\ker\iota_*=\dim_{\mathbb{R}}H_k(\partial\mathcal{W};\mathbb{R})\,.\]
+        Weiter verschwindet \(Q(x):=x\cdot x\) auf \(\ker\iota_*\), also folgt
+        \[\abs{\sigma(\partial\mathcal{W})}=\abs{\sigma(Q)}\leq\dim_{\mathbb{R}}H_k(\partial\mathcal{W};\mathbb{R})-2\dim_{\mathbb{R}}\ker\iota_*=0\]
+        und somit \(\sigma(\partial\mathcal{W})=0\).
+    \subsubsection{Behauptung \(ii\)}
+        Das folgt, da die mittlere Homologiegruppe der disjunkten Vereinigung, der verbundene Summe und der verbundene Randsumme spaltet, und somit zu \(H_k(\mathcal{M})\oplus H_k(\mathcal{N})\) isomorph ist.
+\end{proof}
+Der Beweis von \(i\) folgt \cite{dold1980lectures} Proposition 9.6. F\"ur einen Beweis von iii siehe \cite{tomdieck2008algebraic} Proposition 18.7.3. Obwohl Satz \ref{thm:sign_prop} keine glatte Struktur fordert folgt aus ihr nur, dass die Signatur eine Chirurgie-Invariante f\"ur geschlossene Mannigfaltigkeiten ist. Ist \(\mathcal{M}\) eine Mannigfaltigkeit mit nicht-leerem Rand, ist \(\mathcal{M}\times\mathbb{I}\) zwar erneut eine Mannigfaltigkeit mit Rand, jedoch gilt
+\[\partial\left(\mathcal{M}\times\mathbb{I}\right)=\partial\mathcal{M}\times\mathbb{I}\cup\mathcal{M}\times\partial\,\mathbb{I}\,.\]
+
+\begin{lemma}\label{lem:4n_symp}
+    Eine freie abelsche Gruppe mit einer unimodularen, geraden quadratischen Form \(\beta\) mit Signatur null besitzt eine schwach symplektische Basis.
+\end{lemma}
+\begin{proof}
+    Da die Signatur null ist, ist die Form indefinit, und besitzt gem\"a\ss{} \cite{milnor1961procedure} Lemma 8 eine nicht-triviale Nullstelle \(e_1\). Da die Form unimodular ist, existiert ein \(\alpha\in H_k(\mathcal{M})\) mit \(\beta(\alpha,e_1)=1\). Da sie gerade ist, l\"asst sich
+    \[f_1:=\alpha-\frac{\beta(\alpha,\alpha)}{2}e_1\]
+    definieren. Es folgen
+    \[\beta(e_1,f_1)=\beta(e_1,\alpha)-\frac{\beta(\alpha,\alpha)}{2}\beta(e_1,e_1)=1\]
+    und
+    \[\beta(f_1,f_1)=\beta(\alpha,\alpha)-\frac{2\beta(\alpha,\alpha)}{2}\beta(\alpha,e_1)+0=0\,.\]
+    Aus der Unimodularit\"at folgt weiter, dass \(H\) in die direkte Summe der Untergruppe \(\langle e_1,f_1\rangle\) und des orthogonalen Komplements spaltet. Die Aussage folgt \"uber eine Induktion \"uber den Rang der Gruppe.
+\end{proof}
+\newpage
+\begin{theorem}\label{thm:sign_inv}
+    Die Signatur induziert einen Monomorphismus \(\sigma\colon P^{4m}\to\mathbb{Z}\).
+\end{theorem}
+\begin{proof}
+    \subsubsection*{Wohldefiniertheit}
+        Sei \({n=i+j+1}\). Es reicht aus \({\sigma(\mathcal{M})=\sigma(\mathcal{N})}\) f\"ur \({\mathcal{N}=\mathcal{M}\multimap\mathbb{S}^i}\) zu zeigen. Es kann zudem angenommen werden, dass \(i\leq j\) gilt, denn l\"asst sich \(\mathcal{N}\) durch gerahmte \(i\)-Chirurgie aus \(\mathcal{M}\) erhalten, l\"asst sich \(\mathcal{M}\) durch gerahmte \(j\)-Chirurgie aus \(\mathcal{N}\) erhalten. Gem\"a\ss{} Lemma \ref{lem:smoothing_pi} existiert eine gerahmte Mannigfaltigkeit \(\mathcal{W}^{n+1}\) mit 
+        \[\partial\mathcal{W}\cong\mathcal{M}\mathop{+}^{\partial\mathcal{M}}\mathcal{N}\,.\]
+        Aus Proposition \ref{thm:sign_prop} folgt \(\sigma(\partial\mathcal{W})=0\), da \(\partial\mathcal{M}\) eine Homotopiesph\"are ist, ist weiter
+        \[H_k(\partial\mathcal{W})\cong H_k(\mathcal{M})\oplus H_k(\mathcal{N})\,,\]
+        also \(0=\sigma(\partial\mathcal{W})=\sigma(\mathcal{M})-\sigma(\mathcal{N})\) und somit \(\sigma(\mathcal{M})=\sigma(\mathcal{N})\). 
+
+    \subsubsection*{Injektivit\"at}
+        Sei \(k\) gerade und \((\mathcal{M}^{2k},F)\) eine gerahmte Mannigfaltigkeit in \(\ker\sigma\). Da \(\partial\mathcal{M}\) eine Homotopiesph\"are ist, ist \(H_k(\mathcal{M})\) gem\"a\ss{} Lemma \ref{lem:middle_free} frei. Da die Schnittform symmetrisch, gerade \ref{thm:intersect_even} und unimodular \ref{crl:intersect_uni} ist und \(\sigma(\mathcal{M})=0\) gilt, besitzt \(H_k(\mathcal{M})\) gem\"a\ss{} Satz \ref{lem:4n_symp} eine schwach symplektische Basis \(e_i,f_i\) mit
+        \[e_i\cdot e_j=f_i\cdot f_j=0\quad\text{und}\quad e_i\cdot f_j=\delta_{ij}\,.\]
+        Aus Satz \ref{thm:intersect_even} folgt, dass \({\alpha(e_i)=0}\) gilt, sodass \(\mathcal{M}\) gem\"a\ss{} Satz \ref{thm:even_symp_ann} zu einer \(k\)-zusammenh\"angenden gerahmten Mannigfaltigkeit \(\chi\)-\"aquivalent ist und damit das triviale Element in \(P_{4m}\) repr\"asentiert. Die Homomorphismus-Eigenschaft folgt aus Lemma \ref{thm:sign_prop}.
+\end{proof}
+
+\begin{example}[Milnor-Mannigfaltigkeit]\label{ex:milnor_man}
+    Es existiert eine \(4n\)-Mannigfaltigkeit \(M(4n)\), deren Schnittform durch die Matrix
+    \[\Gamma_8:=\begin{pmatrix}
+        2 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+        1 & 2 & 1 & 0 & 0 & 0 & 0 & 0\\
+        0 & 1 & 2 & 1 & 0 & 0 & 0 & 0\\
+        0 & 0 & 1 & 2 & 1 & 0 & 0 & 0\\
+        0 & 0 & 0 & 1 & 2 & 1 & \mathcolor{red}{1} & 0\\
+        0 & 0 & 0 & 0 & 1 & 2 & \mathcolor{red}{0} & 0\\
+        0 & 0 & 0 & 0 & \mathcolor{red}{1} & \mathcolor{red}{0} & 2 & 1\\
+        0 & 0 & 0 & 0 & 0 & 0 & 1 & 2
+    \end{pmatrix}\]
+    gegeben ist. Durch eine Rechnung folgt \(\det(\Gamma_8)=1\) und \(\sigma(\Gamma_8)=8\). Es gilt also \(\sigma(M(4n))=8\). Diese l\"asst sich konstruieren, indem an eine \(2k\)-Scheibe acht \(k\)-Henkel angebracht werden. Hierzu werden disjunkte Anklebeabbildungen \(\phi_i\colon\mathbb{S}^{k-1}\hookrightarrow\mathbb{D}^{2k}\), die sich f\"ur \(k\geq3\) zu disjunkten eingebetteten Scheiben fortsetzen lassen. In der Mannigfaltigkeit \(\mathcal{D}\), welche durch das Anbringen von Henkeln entlang der \(\phi\) entsteht, k\"onnen nun diese eingebetteten Scheiben als untere-, und die Kerne der Henkel als obere Hemisph\"aren aufgefasst werden. F\"ur jeden Henkel ergibt sich derart eine \(k\)-Sph\"are. Es l\"asst sich zeigen, dass sich die Anklebeabbildungen derart w\"ahlen lassen, dass zu gegebenen Elementen \(\eqcl{\gamma_i}\in\pi_{k-1}\left(\operatorname{SO}\left(k\right)\right)\) die Kupplungsfunktionen der Normalenb\"undel der Pr\"asentationssph\"aren gerade die \(\gamma_i\) sind. Wird nun acht mal \(\tau_k\) gew\"ahlt, ergibt sich die Milnor-Mannigfaltigkeit. Die Schnittform wird durch die Matrix \(\Gamma_8\) beschrieben, dass zugeh\"orige Gitter ist durch das au\ss erordentliche Dynkin-Diagramm \(E_8\) klassifiziert.
+    \begin{figure}[!ht]
+        \centering
+        \begin{tikzpicture}
+            \draw 
+                (1, 0) node [state, minimum size = 5pt] (A) {}
+                (2, 0) node [state, minimum size = 5pt] (B) {}
+                (3, 0) node [state, minimum size = 5pt] (C) {}
+                (4, 0) node [state, minimum size = 5pt] (D) {}
+                (5, 0) node [state, minimum size = 5pt] (E) {}
+                (5, 1) node [state, minimum size = 5pt] (F) {}
+                (6, 0) node [state, minimum size = 5pt] (G) {}
+                (7, 0) node [state, minimum size = 5pt] (H) {}
+
+                (A) -- (B) -- (C) -- (D) -- (E) -- (G) -- (H)
+                (F) -- (E)
+            
+            ;
+        \end{tikzpicture}
+    \end{figure}
+\end{example}
+
+\begin{theorem}\label{thm:sign_image}
+    Es gilt \(P^{4m}\cong\operatorname{Im}\sigma=8\mathbb{Z}\).
+\end{theorem}
+\begin{proof}
+    Sei \((\mathcal{M},F)\in P^{4m}\). Dann ist \(\sigma(\mathcal{M})\) gem\"a\ss{} \ref{thm:sign_prop} durch acht teilbar. Da \(\sigma\) gem\"a\ss{} \ref{thm:sign_inv} ein Monomorphismus ist, ist \(P^{4m}\) zu einer Untergruppe von \(8\mathbb{Z}\) isomorph. Die Aussage folgt, da die Milnor-Mannigfaltigkeit \(M(4m)\) in \(P^{4m}\) liegt und Signatur \(8\) besitzt \ref{ex:milnor_man}.
+\end{proof}

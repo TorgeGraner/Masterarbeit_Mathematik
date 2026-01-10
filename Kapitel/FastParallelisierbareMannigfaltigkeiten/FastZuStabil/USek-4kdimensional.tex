@@ -1,0 +1,20 @@
+Sei erneut \(\xi=q^*\mu\). Dann gilt f\"ur die Pontrjagin-Klassen \({p_i(\xi)\in H^{4i}(\mathcal{M})}\) und \({p_i(\mu)\in H^{4i}(\mathbb{S}^{4m})}\) 
+\[p_i(\xi)=p_i(q^*\mu)=q^*p_i(\mu)\,.\]
+Da f\"ur \(i<k\) stets \(H^{4i}(\mathbb{S}^{4m})=0\) gilt, m\"ussen also alle niederen Pontrjagin-Klassen von \(\xi\) null sein. Dann ist durch
+\[P\colon\pi_{4m-1}(\operatorname{SO})\to\mathbb{Z},\,\eta\mapsto\big\langle p_k(\eta),\eqcl{\mathbb{S}^{4m}}\big\rangle\]
+ein Homomorphismus definiert. Dass dies tats\"achlich ein Homomorphismus ist, folgt aus der Na\-t\"ur\-lich\-keit der Pontrjagin-Klassen. Gem\"a\ss{} \cite{kervaire1959obstructions} ist \(P\) ein Monomorphismus, und es gilt
+\[p(x)\quad\text{ist ein Vielfaches von}\quad\frac{3+(-1)^{m+1}}{2}(2m-1)!\,.\]
+\begin{lemma}\label{lem:4m_stable_pont}
+    Ein \(4m\)-dimensionales, fast parallelisierbares Vektorb\"undel \(\xi\) \"uber \(\mathcal{M}^{4m}\) ist genau dann stabil trivial, wenn \(p_m(\xi)=0\) ist.
+\end{lemma}
+\begin{proof}
+    Ist \(\xi\) stabil trivial, ist \(p_m(\xi)=0\). Sei umgekehrt \(p_m(\xi)=0\) und \(\xi\cong q^*\mu\). Da \(q\) den Grad eins besitzt, muss auch \(p_m(\mu)=0\) sein. Dann ist
+    \[P(\mu\oplus\underline{\mathbb{R}})=\langle p_m(\mu\oplus\underline{\mathbb{R}}),\eqcl{\mathbb{S}^n}\rangle=\langle p_m(\mu),\eqcl{\mathbb{S}^n}\rangle=0\,,\]
+    da \(P\) ein Monomorphismus ist, ist \(\mu\) und somit auch \(\xi\) stabil trivial.
+\end{proof}
+\begin{theorem}
+    Eine fast parallelisierbare Mannigfaltigkeit \(\mathcal{M}^{4m}\) ist genau dann stabil parallelisierbar, wenn \(\sigma(\mathcal{M})=0\) gilt.
+\end{theorem}
+\begin{proof}
+    Sei \(p_i:=p_i(T\mathcal{M})\). Es sei daran erinnert, dass \(p_i=0\) f\"ur \(i<m\) ist. Der Signatursatz von Hirzebruch impliziert deshalb, dass die Signatur ein nicht-triviales Vielfaches von \(\langle p_m,\eqcl{\mathcal{M}}\rangle\) ist. Somit ist \(p_m=0\) genau dann, wenn \(\sigma(\mathcal{M})=0\) ist. Die Aussage folgt aus Lemma \ref{lem:4m_stable_pont}.
+\end{proof}

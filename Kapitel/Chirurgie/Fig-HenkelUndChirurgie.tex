@@ -1,0 +1,88 @@
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale = 0.6]
+
+        \path (-50:3) arc (-50:230:3)
+        \foreach\i in {0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1} { node [pos = \i] (A\i) {}};
+
+        % Right tube backframe
+        \foreach\i in {0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45} { 
+            \draw [thick, densely dotted, rotate = -50 + \i * 280] ({A\i}.center) ++(180:1 and 0.5) arc (180:360:1 and 0.3 - 0.875 * \i);
+        }
+        % Right core
+        \draw [thick, orange]
+            (-50:3) node {\tiny\textbullet} arc (-50:90:3);
+
+        % Small ball
+        \begin{scope}[yshift = 3cm] 
+            % Cocore
+            \draw [fill, color = darkgreen, opacity = 0.5] (0:0.1375 and 1) arc (0:360:0.1375 and 1);
+            % Transversal sphere
+            \draw [thick, densely dotted, color = {rgb,255:red,0;green,100;blue,0}] 
+                (90:0.1375 and 1) arc (90:270:0.1375 and 1);
+            \draw
+                (1, 0) arc (0:360:1)
+                (180:1 and 0.5) arc (180:360:1 and 0.5);
+            \draw [densely dotted]
+                (0:1) arc (0:180:1 and 0.5);
+        \end{scope}
+
+        % Right tube topframe
+        \foreach\i in {0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4} { 
+            \draw [thick, rotate = -50 + \i * 280] ({A\i}.center) ++(0:1 and 0.5) arc (0:180:1 and 0.3 - 0.875 * \i);
+        }
+
+        \path [thick, rotate = -50, color = red] ({A0}.center) ++(0:1 and 0.5) arc (0:180:1 and 0.3) node [pos = 0.7] {\tiny\textbullet};
+
+        % Right tube
+        \draw [thick]
+            (-50:4) arc (-50:90:4) 
+            (-50:2) arc (-50:90:2);
+
+        % Big ball
+        \begin{scope}[yshift = -3.75cm, scale = 3]
+            \draw [densely dotted]
+                (90:0.5 and 1) arc (90:270:0.5 and 1) 
+                (0:1 and 0.5) arc (0:180:1 and 0.5);
+            \shade[ball color = blue!10!white, opacity = 0.5] (1, 0) arc (0:360:1) -- cycle;
+            \draw [thick]
+                (0:1) arc (0:360:1) 
+                (-90:0.5 and 1) arc (-90:90:0.5 and 1) 
+                (180:1 and 0.5) arc (180:360:1 and 0.5);
+        \end{scope}
+
+        % Left tube
+        \draw [thick]
+            (90:4) arc (90:230:4) 
+            (90:2) arc (90:230:2);
+
+        % Left tube backframe
+        \foreach\i in {0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95} { 
+            \draw [thick, densely dotted, rotate = -50 + \i * 280] ({A\i}.center) ++(0:1 and 0.5) arc (0:180:1 and 0.3 - 0.875 * \i);
+        }
+        % Meridian backframe
+        \draw [thick, densely dotted, rotate = -50 + 280, color = blue] ({A1}.center) ++(0:1 and 0.5) arc (0:180:1 and 0.3 - 0.875) node [pos = 0.6, red] {\tiny\textbullet};
+        % Left core
+        \draw [thick, orange]
+            (90:3) arc (90:230:3) node {\tiny\textbullet};
+        
+        % Small ball shading
+        \shade[ball color = blue!10!white, opacity = 0.5, yshift = 3cm] (1, 0) arc (0:360:1) -- cycle;
+        
+        % Transversal sphere top frame
+        \draw [thick, color = darkgreen, yshift = 3cm] 
+            (-90:0.1375 and 1) arc (-90:90:0.1375 and 1);
+
+        % Last right tube topframe 
+        \draw [thick, rotate = -50 + 0.45 * 280] ({A0.45}.center) ++(0:1 and 0.5) arc (0:180:1 and 0.3 - 0.875 * 0.45);
+
+        % Left tube topframe
+        \foreach\i in {0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95} { 
+            \draw [thick, rotate = -50 + \i * 280] ({A\i}.center) ++(180:1 and 0.5) arc (180:360:1 and 0.3 - 0.875 * \i);
+        }
+        % Meridian topframe
+        \draw [thick, rotate = -50 + 280, color = blue] ({A1}.center) ++(180:1 and 0.5) arc (180:360:1 and 0.3 - 0.875);
+        
+    \end{tikzpicture}
+    \caption{Eine Vollkugel mit einem Henkel. Farblich markiert sind \textcolor{orange}{Kern}, \textcolor{darkgreen}{Kokern}, \textcolor{blue}{Meridian} und \textcolor{red}{\"Aquator}.}\label{fig:surgery}
+\end{figure}

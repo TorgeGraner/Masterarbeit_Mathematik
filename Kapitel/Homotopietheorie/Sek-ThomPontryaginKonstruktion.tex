@@ -1,0 +1,62 @@
+Zwei geschlossene, normal gerahmte Untermannigfaltigkeiten \(\mathcal{M}^n\) und \(\mathcal{V}^n\) einer geschlossenen Mannigfaltigkeit \(\mathcal{N}^{n+k}\) hei\ss en gerahmt kobordant, falls ein Kobordismus \(\mathcal{W}^{n+1}\subseteq\mathcal{N}\times\mathbb{I}\) mit einer Rahmung existiere, die mit den Rahmungen von \(\mathcal{M}\) und \(\mathcal{V}\) \"ubereinstimmt. Die Menge der \"Aquivalenzklassen zusammen mit der disunkten Vereinigung bildet f\"ur \(k\geq n+2\) eine abelsche Gruppe \cite{kosinski1992differential} Kapitel IX Satz 3.1. Das Nullelement ist hierbei trivialerweise die \"Aquivalenzklasse der leeren Mannigfaltigkeit. Ein Repr\"asentant dessen ist durch die Standardsph\"are mit der \textit{Standard-Rahmung} gegeben. Diese ist durch kanonische Identifizierungen des nach au\ss en  gerichtete Normalenvektors \(n(p)\in N_p\mathbb{S}^n\subseteq\mathbb{R}^{n+k}\) zusammen mit den Vektoren \(e_{n+2},\dots,e_{n+k}\) gegeben. Inverse Elemente sind \"Aquivalenzklassen der gleichen Mannigfaltigkeit, in welchem ein Basisvektor \(v\) mit \(-v\) ersetzt wurde. Die derartig erhaltene Gruppe sei durch \(\Omega_n^{\text{\tiny Fr}}(\mathcal{N})\) bezeichnet.
+\begin{figure}
+    \centering
+    \tdplotsetmaincoords{60}{110}
+    \tdplotsetthetaplanecoords{0}
+    
+    \begin{tikzpicture}[scale = 2.5, tdplot_main_coords]
+        \draw[dashed,tdplot_rotated_coords] (0,-1,0) arc (-90:90:1);
+        \draw[tdplot_rotated_coords]
+        \foreach \i in {-60, -30,..., 60} {
+            (\i:1) ++(\i:0.25) edge[stealth-] (\i:1)
+        };
+        \draw
+        \foreach \i in {0,45, ..., 360} {
+            (\i:1) ++(\i:0.25) edge[stealth-] (\i:1)
+        }
+        \foreach \i in {45, 135} {
+            (\i:1cm and 1cm) ++(\i:0.25cm and 0.25cm) edge[stealth-] (\i:1cm and 1cm)
+        };
+        \draw [dashed] (180:1cm and 5mm) arc (180:0:1cm and 1cm) (1, 0, 0) arc (0:360:1);
+        \shade[ball color=blue!10!white,opacity=0.2] (1cm, 0) arc (0:-180:1cm and 5mm) arc (180:0:1cm and 1cm);
+    \end{tikzpicture}
+    \caption{Die Standardrahmung von \(\mathbb{S}^1\subset\mathbb{R}^2\), und der gerahmte Nullbordismus \(\mathbb{S}_+^2\subset\mathbb{R}^3\).}
+\end{figure}
+
+\subsection{Thom-Pontrjagin-Kollapsabbildungen}
+    Nach dem Satz von Sard besitzt jede Funktion \(f\colon\mathcal{N}^{n+k}\to\mathbb{S}^k\) einen regul\"aren Wert \(\star\in\mathbb{S}^k\), wobei das Urbild eines regul\"aren Wertes stets eine \(n\)-dimensionale Untermannigfaltigkeit \(f^{-1}(\star)\subseteq\mathcal{N}\) ergibt. Da \(\star\) eine nulldimensionale Mannigfaltigkeit ist, besitzt diese ein triviales Normalenb\"undel. Eine Rahmung dieser (also eine Wahl einer positiv orientierten Basis \(\phi\) von \(T_{\star}\mathbb{S}^k\)) l\"asst sich zu einer normalen Rahmung von \(f^{-1}(\star)\) zur\"uckziehen. Unterschiedliche regul\"are Punkte oder unterschiedliche positiv orientierte Basen ergeben hierbei zueinander gerahmt kobordante Mannigfaltigkeiten. Folglich l\"asst sich die Abbildung
+    \[\Tilde{p}\colon\mathcal{C}^{\infty}(\mathcal{N},\mathbb{S}^k)\to\Omega_n^{\text{\tiny Fr}}(\mathcal{N}),\,f\mapsto\eqcl{\left(f^{-1}(\star),(\dx f)^*(\phi)\right)}\]
+    definieren. Eine glatte Homotopie \(H\colon\mathcal{N}\times\mathbb{I}\to\mathbb{S}^k\) mit regul\"arem Punkt \(\star\) zwischen zwei Abbildungen \(f,g\in\mathcal{C}^{\infty}(\mathcal{N},\mathbb{S}^k)\) birgt nun den gerahmten Kobordismus \(H^{-1}(\star)\subseteq\mathcal{N}\times\mathbb{I}\) zwischen \(f^{-1}(\star)\) und \(g^{-1}(\star)\). Auf diese Art und Weise induziert \(\tilde{p}\) eine Abbildung \(p\colon\eqcl{\mathcal{N},\mathbb{S}^k}\to\Omega_n^{\text{\tiny Fr}}(\mathcal{N})\). Umgekehrt l\"asst sich einer Mannigfaltigkeit \(\mathcal{M}^n\subseteq\mathcal{N}^{n+k}\) mit einer  Trivialisierung \(\Phi\colon N\mathcal{M}\to\mathcal{M}\times\mathbb{R}^k\) folgenderma\ss en eine Funktion \(f\colon\mathcal{N}\to\mathbb{S}^k\) mit \(\mathcal{M}=f^{-1}(\star)\) zuordnen. Sei \(\Psi\colon N\mathcal{M}\hookrightarrow\mathcal{N}\) eine Tubenumgebung mit Bild \(U\subseteq\mathcal{N}\). Dann kann gem\"a\ss{} Diagramm \ref{dia:gen_map} eine glatte Abbildung \(f\colon U\to\mathbb{S}^k\setminus\{-\star\}\) konstruiert werden, die durch
+    \[\Tilde{f}\colon\mathcal{N}\to\mathbb{S}^k,\,x\mapsto\begin{cases}
+        f(x) & x\in U\\
+        -\star & \text{sonst}
+    \end{cases}\]
+    auf \(\mathcal{N}\) fortgesetzt werden kann, \(\Tilde{f}^{-1}(\star)=\mathcal{M}\) erf\"ullt, und die Rahmung \(\Phi\) induziert. Bei der Konstruktion sei beachtet, dass sich unterschiedliche Basen von \(T_{\star}\mathbb{S}^n\) bez\"uglich einer Funktion zwar zu \"aquivalenten Rahmungen zur\"uckziehen, dass eine Mannigfaltigkeit zu unterschiedlichen Rahmungen jedoch sehr wohl in unterschiedlichen gerahmten Kobordanzklassen liegen kann. Von besonderem Interesse ist der Fall \({\mathcal{N}=\mathbb{S}^{n+k}}\), da \(\eqcl{\mathbb{S}^{n+k},\mathbb{S}^k}=\pi_{n+k}(\mathbb{S}^k)\) ist. Siehe f\"ur weitere Informationen \cite{milnor1965topology} \S7.
+
+    \begin{figure}
+        \centering
+        \begin{tikzpicture}
+            \draw   node (A) {\(U\subseteq\mathcal{N}\)}
+                    node [above = of A] (B) {\(N\mathcal{M}\)}
+                    node [right = of B] (C) {\(\underline{\mathbb{R}}^k\)}
+                    node [right = of C] (D) {\(\mathbb{R}^k\)}
+                    node [below = of D] (E) {\(\mathbb{S}^k\setminus\{-\star\}\)}
+                    (B) edge [bend right = 35, ->] node [sloped, above, rotate = 180] {\(\cong\)} node [left] {\(\Psi\)} (A)
+                    (B) edge [bend left = 35, ->] node [below] {\(\cong\)} node [above] {\(\Phi\)} (C)
+                    (A) edge [bend right = 35, ->] node [sloped, above] {\(\cong\)} (C)
+                    (C) edge [bend left = 35, ->] node [above] {\(\pi_2\)} (D)
+                    (D) edge [bend left = 35, ->] node [sloped, above] {\(\cong\)} (E)
+                    (A) edge [bend right = 25, ->] node [sloped, above] {\(f\)} (E);
+        \end{tikzpicture}
+        \caption{Die Konstruktion einer \(\mathcal{M}\) generierenden Abbildung \(f\).}
+        \label{dia:gen_map}
+    \end{figure}
+
+    \begin{proposition}[Thom-Pontrjagin]
+        Die Gruppen \(\Omega_n^{\textup{\tiny Fr}}(\mathbb{S}^{n+k})\) und \(\pi_{n+k}(\mathbb{S}^{k})\) sind isomorph.
+    \end{proposition}
+    \noindent Insbesondere wird die Folge der \(\pi_{n+k}(\mathbb{S}^k)\), also auch die Folge der \(\Omega_n^{\text{\tiny Fr}}(\mathbb{S}^{n+k})\) f\"ur \(k\geq n+2\) station\"ar. Setze
+    \[\Omega_n^{\text{\tiny Fr}}:=\lim_{k\to\infty}\Omega_n^{\textup{\tiny Fr}}(\mathbb{S}^{n+k})\cong\lim_{k\to\infty}\pi_{n+k}(\mathbb{S}^k)=\Pi_n\,.\]
+    Es stellt sich in der obigen Definition die Frage, warum die disjunkte Summe anstatt der verbundenen Summe als Gruppenoperation gew\"ahlt wird. Die Antwort darauf liegt in dem durch die verbundene Randsumme erhaltenen Kobordismus
+    \[\mathcal{W}=\mathcal{M}\times\mathbb{I}+\mathcal{N}\times\mathbb{I}\quad\text{mit}\quad\partial\mathcal{W}\cong(-\mathcal{M})\sqcup(-\mathcal{N})\sqcup(\mathcal{M}+\mathcal{N})\,.\]
+    Gegebene Rahmungen \(F\) und \(G\) von \(\mathcal{M}\) und \(\mathcal{N}\) induzieren eine Rahmung auf \(\mathcal{W}\) und damit auf \(\mathcal{M}+\mathcal{N}\). Folglich sind \({(\mathcal{M},F)\sqcup(\mathcal{N},G)}\) und \({(\mathcal{M}+\mathcal{N},H)}\) gerahmt kobordant, sodass die disjunkte Summe und die verbundene Summe tats\"achlich die gleiche Gruppenoperation bestimmen.

@@ -1,0 +1,31 @@
+Das Normalenb\"undel einer Mannigfaltigkeit \(\mathcal{M}^n\) ist stets von dem umliegenden Raum abh\"angig. Der Einbettungssatz von Whitney garantiert Einbettungen \(\mathcal{M}\hookrightarrow\mathbb{R}^m\) f\"ur \(m\geq2n\). F\"ur \(m\geq2n+2\) ist diese Einbettung bis aus Isotopie eindeutig bestimmt. Die Normalenb\"undel zweier solcher isotoper Einbettungen in einen \(\mathbb{R}^m\) sind isomorph, das Normalenb\"undel \textit{stabilisieriert} sich also. Dies motiviert den Begriff der Stabilisierung von Vektorb\"undeln.
+
+\subsection{Die Einh\"angung}
+    Sei \(f\in\operatorname{SO}(n)\). Dieses Element kann einerseits als stetige Abbildung
+    \[f\colon\mathbb{S}^{n-1}\to\mathbb{S}^{n-1}\quad\text{mit}\quad Sf\colon S\mathbb{S}^{n-1}\to S\mathbb{S}^{n-1}\,,\]
+    andererseits aber auch als lineare Abbildung
+    \[f\colon\mathbb{R}^n\to\mathbb{R}^n\quad\text{mit}\quad Sf\colon\mathbb{R}^n\oplus\mathbb{R}\to\mathbb{R}^n\oplus\mathbb{R},\,x\mapsto\begin{pmatrix}
+        A & 0\\
+        0 & 1
+    \end{pmatrix}\cdot x\,.\]
+    verstanden werden. Jeweils ist \(Sf\in\operatorname{SO}(n+1)\) und definiert eine Inklusion \(S\colon\operatorname{SO}(n)\hookrightarrow\operatorname{SO}(n+1)\). Diese induziert offenbar einen Homomorphismus
+    \[\pi_k(\operatorname{SO}(n))\xrightarrow{S_*}\pi_k(\operatorname{SO}(n+1))\,.\]
+    Die gesamte Konstruktion erkl\"art einen Zusammenhang zwischen der topologischen Einh\"angung und der direkten Summe mit \(\mathbb{R}\). Zu einem orientierbaren Vektorb\"undel \(\xi\colon E\to\mathbb{S}^{k+1}\) mit Kupplungsfunktion \(\gamma\colon\mathbb{S}^k\to\operatorname{SO}(n)\) l\"asst sich diese Korrespondenz derart beschreiben, dass das Vektorb\"undel \(\xi\oplus\underline{\mathbb{R}}\to\mathbb{S}^{k+1}\), die Kupplungsfunktion \(S\gamma\) besitzt. 
+
+\subsection{Die Stabilisierungsfolge der Sph\"are}\label{subsec:standard_frame_seq}
+    Wie in Beispiel \ref{ex:framebundle_sphere} ist das Rahmenb\"undel der Sph\"are gerade \(\operatorname{SO}(n+1)\to\mathbb{S}^n\). Die Faser ist hierbei \(\operatorname{SO}(n)\). Dies liefert die wichtige Faserung
+    \[\operatorname{SO}(n)\xrightarrow{S}\operatorname{SO}(n+1)\xrightarrow{\psi}\mathbb{S}^n\,,\]
+    wobei \(S\) erneut die Einh\"angung bezeichne, und \(\psi(A)=A\cdot e_1\) sei. Zugeh\"orig zu jeder Faserung ist eine lange exakte Folge
+    \[\pi_{k+1}\left(\mathbb{S}^n\right)\xrightarrow{\partial}\pi_k\left(\operatorname{SO}(n)\right)\xrightarrow{S_*}\pi_k\left(\operatorname{SO}(n+1)\right)\xrightarrow{\psi_*}\pi_k\left(\mathbb{S}^n\right)\xrightarrow{\partial}\pi_{k-1}\left(\operatorname{SO}(n)\right)\,.\]
+    Diese ist besonders f\"ur \(k=n\) von Interesse. In diesem Fall wird der Generator \(\eqcl{\mathbbm{1}}\in\pi_n\left(\mathbb{S}^n\right)\) durch \(\partial\) auf die Kupplungsfunktion des Tangentialb\"undels abgebildet. Siehe auch \cite{knapp2013vektorbuendel} Korollar 3.3.4. Die Idee ist, dass sich die Identit\"at zu einer Funktion \(\mathbb{D}^n\to\operatorname{SO}(n+1)\) anheben l\"asst, die zu einer Rahmung des Tangentialb\"undels \"uber der oberen Hemisph\"are \(\mathbb{S}_+^n\cong\mathbb{D}^n\) homotop ist. Die Einschr\"ankung dieser Anhebung auf \(\mathbb{S}^{n-1}\) ist dann gerade der Rahmenwechsel dieser Rahmung zu der Standardrahmung der unteren Hemisph\"are. Ihre Homotopieklasse ist per Definition \(\eqcl{\tau_n}\). Der Kern \(\ker S_*\cong\im\partial\) wird also von \(\eqcl{\tau_n}\) erzeugt. 
+
+\subsection{Normalenb\"undel eingebetteter Sph\"aren}\label{subsec:stable_normal_bundle}
+    Sei \({n\geq2k}\), \(\mathcal{M}^n\) eine \(\pi\)-Mannigfaltigkeit und \({\mathcal{S}^k\hookrightarrow\mathcal{M}^n}\) eine eingebettete Sph\"a\-re, die gem\"a\ss{} Korollar \ref{cor:subsphere_stable} ein stabil triviales Normalenb\"undel \(\nu\) besitzt. Es gelten also 
+    \[0=\eqcl{\nu\oplus\underline{\mathbb{R}}}=S_*\eqcl{\nu}\,\quad\text{beziehungsweise}\quad\eqcl{\nu}\in\ker S_*\,.\]
+    Dann folgt aus dem Vorangegangenen, dass \(\eqcl{\nu}\) ein Vielfaches von \(\eqcl{\tau_k}\) ist. Weitere Kenntnisse \"uber den Rang von \(\eqcl{\tau_k}\) liefern
+    \[\eqcl{\nu}\in\ker S_*\cong\begin{cases}
+        \mathbb{Z} & k=2m\\
+        \mathbb{Z}_2 & k=2m+1\notin\{1,3,7\}\\
+        0 & k\in\{1,3,7\}
+    \end{cases}\,.\]
+    Siehe hierzu auch \cite{knapp2013vektorbuendel} Abschnitt 3.3.1.

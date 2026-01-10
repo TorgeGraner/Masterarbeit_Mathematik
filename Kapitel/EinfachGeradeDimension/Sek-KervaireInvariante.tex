@@ -1,0 +1,136 @@
+\"Ahnlich der Signatur l\"asst sich eine Invariante gerahmter Kobordismen definieren, die \textbf{Kervaire-In\-va\-ri\-an\-te}, welche daf\"ur genutzt werden kann zu entscheiden, wann eine \(2k\)-Mannigfaltigkeit mit \(k\) ungerade zu einer \(k\)-zusammen\-h\"angen\-den Mannigfaltigkeit gerahmt kobordant ist. Die Definition dieser ist jedoch etwas komplizierter, als die der Signatur.
+
+\subsection{Quadratische Verfeinerungen}
+    Sei \(V\) ein \(\mathbb{K}\)-Vektorraum. Wenn \(\mathbb{K}\) von der Charakteristik \(\not=2\) ist, korrespondiert jede Bilinearform \(\beta\colon V\otimes V\to\mathbb{K}\) mit einer quadratischen Form \(q\colon V\to\mathbb{K}\) \"uber die Korrespondenz
+    \[\beta(x,y):=\frac{q(x+y)-q(x)-q(y)}{2}\quad\text{und}\quad q(x):=\beta(x,x)\,.\]
+    Dies \"andert sich, wenn \(\mathbb{K}\) die Charakteristik zwei besitzt. In diesem Fall muss eine quadratische Verfeinerung betrachtet werden.
+    \begin{definition}[Quadratische Verfeinerung]
+        Sei \(V\) ein \(\mathbb{F}_2\)-Vektorraum und \(\beta\colon V\otimes V\to\mathbb{F}_2\) eine Bilinearform. Eine Funktion \(q\colon V\to\mathbb{F}_2\) hei\ss e quadratische Verfeinerung, wenn f\"ur alle \(x,y\in V\) die Gleichung
+        \[\beta(x,y)=q(x+y)+q(x)+q(y)\]
+        gelte.
+    \end{definition}
+    Die Existenz einer solchen Verfeinerung ist nicht trivial.
+    \newpage
+    \begin{definition}[Arf-Invariante einer quadratischen Form]
+        Sei \(V\) ein \(\mathbb{F}_2\)-Vektorraum mit einer symplektischen Basis \(e_i,f_i\in V\) bez\"uglich einer Bilinearform \(\beta\colon V\otimes V\to\mathbb{F}_2\) mit quadratischer Verfeinerung \(q\colon V\to\mathbb{F}_2\) besitzt. Setze
+        \[\operatorname{Arf}(\beta,q):=\sum_{i=1}^kq(e_i)q(f_i)\,.\]
+    \end{definition}
+    Die Arf-Invariante h\"angt hierbei nicht von der gew\"ahlten symplektischen Basis ab. 
+
+\subsection{Eine quadratische Verfeinerung der Schnittform}
+    Sei \(\mathcal{M}\) eine \((k-1)\)-zusammenh\"angende \(\pi\)-Mannigfaltigkeit. \"Uber die Schnittform wird auf den \(\mathbb{F}_2\)-Vektorr\"aumen \(H_k(\mathcal{M};\mathbb{F}_2)\)
+    \[H_k(\mathcal{M};\mathbb{F}_2)\otimes H_k(\mathcal{M};\mathbb{F}_2)\to\mathbb{F}_2,\,x\otimes y\mapsto x\cdot y\]
+    eine unimodulare, schiefsymmetrische Bilinearform definiert. Es stellt sich die Frage nach einer geeigneten quadratischen Verfeinerung. Der wohl einfachste Kandidat hierzu wurde bereits zuvor definiert, und ist durch jene Abbildung \(\alpha\) gegeben, die einer eingebetteten Sph\"are, die \(x\in H_k(\mathcal{M})\) repr\"asentiert, die Kupplungsfunktion ihres Normalenb\"undels zuordnet. F\"ur \(k\in\{3,7\}\) ist bereits \({\alpha(x)\in\ker S_*=0}\), die Funktion \(\alpha\) ist also trivial.
+    \begin{theorem}
+        Sei \(\mathcal{M}^{2k}\) eine \((k-1)\)-zusammenh\"angende \(\pi\)-Mannigfaltigkeit und \(k\) ungerade. Dann gilt f\"ur \(x,y\in H_k(\mathcal{M})\) die Gleichung
+        \begin{equation}
+            \alpha(x+y)=\alpha(x)+\alpha(y)+\eqcl{\tau_k}\cdot(x\cdot y)\in\ker S_*\,.
+        \end{equation}
+    \end{theorem}
+    \begin{proof}
+        Seien \(f\colon\mathbb{S}^k\hookrightarrow\mathcal{M}\) und \(g\colon\mathbb{S}^k\hookrightarrow\mathcal{M}\) zwei Einbettungen, die \(x\) und \(y\) repr\"asentieren. Analog zu der Konstruktion der Addition der Homotopiegruppen ist eine stetige Funktion \(f+g\colon\mathbb{S}^k\to\mathcal{M}\) definiert. Siehe auch Abbildung \ref{fig:imm_sum}. Aus der Nat\"urlichkeit des Hurewicz-Homomorphismus folgt, dass \(\eqcl{f+g}=\eqcl{f}+\eqcl{g}\in\pi_k(\mathcal{M})\) die Klasse \(x+y\) repr\"asentiert. Es kann angenommen werden, dass \(f+g\) eine sich selbst transversal schneidende Immersion, nicht zwingenderma\ss en jedoch eine Einbettung, ist. Die Selbstschnittzahl \(\beta\) von \(f+g\) ist gerade die Summe von \(\pm1\) \"uber alle Doppelpunkte von \(f+g\). Da weder \(f\) noch \(g\) Doppelpunkte besitzen, muss
+        \[\beta(f+g)=\eqcl{\mathcal{S}_1,\mathcal{S}_2}=x\cdot y\]
+        gelten. Weiter ergibt sich aus der Konstruktion der Kupplungsfunktionen, dass \(\nu(f+g)=\nu(f)+\nu(g)\) gilt.
+
+        \subsubsection{Der Fall \(x\cdot y=0\)}
+            Es folgt \(\beta(f+g)=0\), sodass \(f+g\) gem\"a\ss{} Korollar \ref{cor:imm_reg_hom} regul\"ar homotop zu einer Einbettung \(\iota\) ist, die \(x+y\) repr\"asentiert. Dann gilt aber
+            \[\alpha(x+y)=\eqcl{\nu(\iota)}=\eqcl{\nu(f+g)}=\eqcl{\nu(f)}+\eqcl{\nu(g)}=\alpha(x)+\alpha(y)\,.\]
+
+        \subsubsection{Der Fall \(x\cdot y=1\)}
+            Sei \(h\colon\mathbb{S}^k\looparrowright\mathcal{M}\) eine nullhomotope Immersion mit Selbstschnittzahl eins. Eine solche existiert im \(\mathbb{R}^{2k}\) gem\"a\ss{} \ref{prop:imm_inter_zero}, also \"uber eine Karte \(\mathbb{R}^{2k}\to\mathcal{M}\) auch in \(\mathcal{M}\). Es folgt, dass \(f+g+h\) Selbstschnittzahl null besitzt, regul\"ar homotop zu einer Einbettung \(\iota\) ist, und die, da \(h\) nullhomotop ist, \(x+y\) repr\"asentiert. Es folgt
+            \begin{equation}\label{eq:alpha_odd}
+                \alpha(x+y)=\eqcl{\nu(\iota)}=\eqcl{\nu(f+g+h)}=\alpha(x)+\alpha(y)+\eqcl{\nu(h)}\,.
+            \end{equation}
+        
+        \subsubsection{Das Normalenb\"undel von \(h\)}
+            Da \(h\) \"uber eine Karte definiert ist, ist \(\nu(h)\in\ker S_*\) nicht von \(\mathcal{M}\) abh\"angig, somit reicht es aus, \(\nu(h)=\tau_k\) f\"ur \(\mathcal{M}=\mathbb{S}^k\times\mathbb{S}^k\) zu zeigen. Es gilt \({H_k(\mathbb{S}^k\times\mathbb{S}^k)\cong\mathbb{Z}\oplus\mathbb{Z}}\). Seien \(x\) und \(y\) von den Einbettungen \({f=\mathbb{S}^k\times p}\) und \({g=p\times\mathbb{S}^k}\) repr\"asentiert. Diese besitzen triviale Normalenb\"undel und es gilt \(x\cdot y=1\). Bekannterweise ist \(f+g\) zu der Diagonalen in \(\mathbb{S}^k\times\mathbb{S}^k\) homotop. Diese besitzt gem\"a\ss{} \cite{milnor1974characteristic} Satz 11.5 Normalenb\"undel \(\tau_k\). Aus \(\alpha(x)=\alpha(y)=0\) folgt
+            \[\eqcl{\nu(h)}\mathop{=}^{\text{\tiny\eqref{eq:alpha_odd}}}\alpha(x+y)=\eqcl{\nu(f+g)}=\eqcl{\tau_k}\,.\]
+            Somit gilt allgemein
+            \[\alpha(x+y)=\alpha(x)+\alpha(y)+\eqcl{\tau_k}\cdot(x\cdot y)\,.\]
+    \end{proof}
+    
+    \begin{figure}
+        \centering
+        \begin{tikzpicture}[scale = 0.5]
+            \draw (1, 0) arc (0:360:1);
+            \draw[xshift = 5cm] (1, 0.5) arc (0:180:1) -- (-1, -0.5) arc (180:360:1) -- cycle;
+            \draw[xshift = 10cm] (0, 0.5) arc (-90:270:1) node {\tiny\textbullet} -- (0, -0.5) arc (-270:90:1) node {\tiny\textbullet} -- cycle;
+
+            \begin{scope}[scale = 0.8, xshift = 18cm]
+                \draw
+                    (1, -3) 
+                    .. controls (0.5,-4) and (2, -4.5) .. (3, -4) node [pos = 0.7, above = 0.2] {\(\mathcal{S}_2\)}
+                    .. controls (4, -3.5) and (3, -1.5) .. (1.5, -1.5) node (A) {\tiny\textbullet}
+                    .. controls (0, -1.5) and (1.5, -2) .. (1, -3)
+                    (1, 1) 
+                    .. controls (2, 0) and (3, 2) .. (3, 4) node [pos = 0.18] (B) {\tiny\textbullet}
+                    .. controls (3, 6) and (2, 6) .. (1, 5) node [pos = 0.75, below = 0.65] {\(\mathcal{S}_1\)}
+                    .. controls (0, 4) and (0, 2) .. (1, 1);
+                \draw (A.center) -- (B.center) node [pos = 0.5, right] {\(\gamma\)};
+            \end{scope}
+            
+            \draw
+                (1.5, 0) edge [-stealth] (3.5, 0)
+                (6.5, 0) edge [-stealth] node [pos = 0.5, above] {\(q\)} (8.5, 0) 
+                (11.5, 0) edge [-stealth] node [pos = 0.5, above] {\(f,\gamma,g\)} (14, 0)
+                ;
+            \draw (A.center) -- (B.center) node [pos = 0.5, right] {\(\gamma\)};
+        \end{tikzpicture}
+        \caption{Die Konstruktion von \(f+g\) \"uber eine Kurve \(\gamma\). Die resultierende immersierte Mannigfaltigkeit kann als verbundenen Summe \(\mathcal{S}_1+\mathcal{S}_2\) verstanden werden.}\label{fig:imm_sum}
+    \end{figure}
+    Dies erm\"oglicht nun f\"ur \(k\notin\{3,7\}\) endlich die Definition einer quadratischen Verfeinerung. Die Funktion
+    \[\Psi\colon H_k(\mathcal{M};\mathbb{F}_2)\cong H_k(\mathcal{M})\otimes\mathbb{F}_2\xrightarrow{\alpha\otimes\mathbbm{1}}\mathbb{F}_2\]
+    erf\"ullt offenbar erneut \(\Psi(x+y)=\Psi(x)+\Psi(y)+x\cdot y\in\mathbb{F}_2\). Die Arf-Invariante bez\"uglich dieser Verfeinerung hei\ss e \textbf{Kervaire-Invariante}, und h\"angt nicht von der Wahl einer Rahmung ab. Es l\"asst sich erkennen, dass f\"ur eine symplektische Basis \(e_i,f_i\) von \(H_k(\mathcal{M})\) nun
+    \[\kappa(\mathcal{M})=\sum_{i=1}^{\ell}\alpha(e_i)\alpha(f_i)\mod2\]
+    gilt.
+
+\subsection{Eigenschaften der Kervaire-Invariante}
+    Sei erneut \(k\notin\{3,7\}\) ungerade. Das vorherige Vorgehen definiert die Kervaire-Invariante f\"ur alle \((k-1)\)-zusammenh\"angenden \(\pi\)-Mannigfaltigkeiten. F\"ur derartige Mannigfaltigkeiten h\"angt die Invariante von keiner gew\"ahlten Rahmung ab. 
+    \begin{lemma}
+        Zwei \(\chi\)-\"aquivalente, \((k-1)\)-zusammenh\"angende, gerahmte Mannig\-faltig\-kei\-ten \(\mathcal{M}^{2k}\) und \(\mathcal{N}^{2k}\), deren R\"an\-der leer oder Homotopiesph\"aren sind, besitzen gleiche Ker\-vaire-In\-va\-ri\-an\-te.
+    \end{lemma}
+    \begin{proof}
+        Sei \(n=i+j+1\). Es reicht aus den Satz f\"ur \(\mathcal{N}=\mathcal{M}\multimap\mathbb{S}^i\) mit \(i\leq j\) zu zeigen. Dann existiert gem\"a\ss{} Lemma \ref{lem:smoothing_pi} eine gerahmte Mannigfaltigkeit \(\mathcal{W}^{2k+1}\) mit 
+        \[\partial\mathcal{W}\cong\mathcal{M}\mathop{+}^{\partial\mathcal{M}}\mathcal{N}\,.\]
+        Diese kann durch endlich viele Chirurgien durch eine \((k-1)\)-zusammenh\"angende Mannigfaltigkeit mit gleichem Rand ersetzt werden. Sei \(\iota\colon\partial\mathcal{W}\hookrightarrow\mathcal{W}\) die kanonische Einbettung. W\"ahle gem\"a\ss{} Satz \ref{thm:symp_base_ann} eine symplektische Basis von \(H_k(\partial\mathcal{W})\) mit \(e_i\in\ker\iota_*\). Sei \(f\colon\mathbb{S}^k\hookrightarrow\partial\mathcal{W}\) eine \(e_i\) repr\"asentierende Einbettung. Aus dem Satz von Hurewicz folgt, dass eine stetige Fortsetzung \(\tilde{f}\colon\mathbb{D}^{k+1}\looparrowright\mathcal{W}\) existiert. Diese kann als Immersion mit wohldefiniertem Normalenb\"undel angenommen werden kann. Da \(\mathbb{D}^{k+1}\) kontrahierbar ist, m\"ussen \(\nu(\tilde{f})=0\) und \(\nu(f)=0\) gelten. Es folgt \(\alpha(e_i)=\eqcl{\nu(f)}=0\), also auch \(\kappa(\partial\mathcal{W})=0\). Da \(\partial\mathcal{M}\) leer oder eine Homotopiesph\"are ist, gilt
+        \[H_k(\partial\mathcal{W})\cong H_k(\mathcal{M}\mathop{+}^{\partial\mathcal{M}}\mathcal{N})\cong H_k(\mathcal{M})\oplus H_k(\mathcal{N})\,,\]
+        symplektische Basen von \(H_k(\mathcal{M})\) und \(H_k(\mathcal{N})\) bilden zusammen also eine Basis von \(H_k(\partial\mathcal{W})\). Dies zeigt \(\kappa(\mathcal{M})+\kappa(\mathcal{N})=0\), also \(\kappa(\mathcal{M})=\kappa(\mathcal{N})\).
+    \end{proof}
+    Sei \((\mathcal{M},F)\) eine gerahmte Mannigfaltigkeit, deren Rand leer ist oder eine Homotopiesph\"are berande. Diese ist zu einer \((k-1)\)-zu\-sam\-men\-h\"ang\-enden gerahmten Mannigfaltigkeiten \((\mathcal{M}^{\prime},F^{\prime})\) \(\chi\)-\"aquivalent, f\"ur welche die Kervaire-Invariante bereits definiert ist. Setze also \({\kappa(\mathcal{M},F):=\kappa(\mathcal{M}^{\prime})}\). Das vorangegangene Lemma garantiert, dass dies wohldefiniert ist.
+    \newpage
+    \begin{lemma}
+        Die Kervaire-Invariante ist bez\"uglich der verbundenen Summe additiv.
+    \end{lemma}
+    \begin{proof}
+        F\"ur \((k-1)\)-zusammenh\"angende \(\pi\)-Mannigfaltigkeiten folgt das aus
+        \[H_k(\mathcal{M}+\mathcal{N})\cong H_k(\mathcal{M})\oplus H_k(\mathcal{N})\,,\]
+        da die Vereinigung symplektischer Basen von \(H_k(\mathcal{M})\) und \(H_k(\mathcal{N})\) eine symplektische Basis von \(H_k(\mathcal{M}+\mathcal{N})\) ergibt.
+    \end{proof}
+
+    \begin{lemma}\label{lem:kerv_homo}
+        Eine gerahmte Mannigfaltigkeit \((\mathcal{M},F)\), deren Rand leer oder eine Homotopiesph\"are ist, sodass \(\kappa(\mathcal{M},F)=0\) gilt, ist zu einer \(k\)-zusammenh\"angenden Mannigfaltigkeit \(\chi\)-\"aquivalent.
+    \end{lemma}
+    \begin{proof}
+        Es kann angenommen werden, dass \(\mathcal{M}\) bereits \((k-1)\)-zu\-sam\-men\-h\"an\-gend ist. Sei \(e_i,f_i\) f\"ur \(1\leq i\leq\ell\) eine symplektische Basis von \(H_k(\mathcal{M})\). Dann gilt
+        \[\kappa(\mathcal{M})=\sum_{i=1}^{\ell}\alpha(e_i)\alpha(f_i)\mod2\,.\]
+        Wenn \(\alpha(e_i)\alpha(f_i)=0\) ist, setze
+        \[e_i^{\prime}:=\begin{cases}
+            e_i & \alpha(e_i)=0\\
+            f_i & \alpha(e_i)=1
+        \end{cases}\qquad\text{und}\qquad f_i^{\prime}:=\begin{cases}
+            f_i & \alpha(e_i)=0\\
+            e_i & \alpha(e_i)=1
+        \end{cases}\,.\]
+        Wegen \(\kappa(\mathcal{M})=0\) gilt \(\alpha(e_i)\alpha(f_i)=1\) f\"ur eine gerade Anzahl von \(i\). F\"ur ein Paar \(\alpha(e_i)\alpha(f_i)=\alpha(e_j)\alpha(f_j)=1\) kann durch die Substitutionen
+        \[e_i^{\prime}:=e_i+e_j\qquad\text{und}\qquad e_j^{\prime}:=f_j-f_i\]
+        und
+        \[f_i^{\prime}:=f_i\qquad\text{und}\qquad f_j^{\prime}:=e_i\]
+        \(\alpha(e_i^{\prime})=\alpha(e_j^{\prime})=0\) erreicht werden. Insgesamt bilden die \(e_i^{\prime},f_i^{\prime}\) eine symplektische Basis, in der \(\alpha(e_i^{\prime})=0\) f\"ur alle \(i\) gilt. Lemma \ref{thm:even_symp_ann} besagt nun, dass \(\mathcal{M}\) zu einer \(k\)-zusammenh\"angenden Mannigfaltigkeit \(\chi\)-\"aquivalent ist.
+    \end{proof}
+
+    \begin{theorem}\label{thm:kerv_iso}
+        Die Kervaire-Invariante \(\kappa\colon P^{2k}\to\mathbb{Z}_2\) ist ein Isomorphismus.
+    \end{theorem}
+    \begin{proof}
+        Sei \({(\mathcal{M},F)\in P^{2k}}\) mit \(\kappa(\mathcal{M},F)=0\). Gem\"a\ss{} Lemma \ref{lem:kerv_homo} ist \(\mathcal{M}\) zu einer \(k\)-zusammenh\"angenden, also einer kontrahierbaren, Mannigfaltigkeit \(\chi\)-\"aquivalent, und repr\"asentiert somit das Nullelement in \(P^{2k}\). Die Aussage folgt, da sich durch Klempern eine \(2k\)-Mannigfaltigkeit in \(P^{2k}\) mit Kervaire-Invariante eins konstruieren l\"asst.
+    \end{proof}

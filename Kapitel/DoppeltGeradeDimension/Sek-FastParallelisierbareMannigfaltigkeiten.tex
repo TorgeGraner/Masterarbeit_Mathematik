@@ -1,0 +1,96 @@
+Das Tangentialb\"undel einer \(n\)-Sph\"are ist f\"ur \(n\notin\{1,3,7\}\) nie trivial. Wird jedoch aus der Sph\"are eine kleine Scheibe entfernt, ergibt sich eine kontrahierbare Mannigfaltigkeit. \"Uber einem kontrahierbaren Raum ist hingegen jedes Vektorb\"undel trivial. Dies motiviert folgende Definition: 
+\begin{definition}[Fast gerahmtes Vektorb\"undel]
+    Ein Vektorb\"undel \(\xi\colon E\to\mathcal{M}\) \"uber einer geschlossenen Mannigfaltigkeit mit einer Einbettung \(\mathcal{D}\hookrightarrow\mathcal{M}\) und einer Rahmung der Einschr\"ankung von \(\xi\) auf \(\mathcal{M}\setminus\mathring{\mathcal{D}}\).
+\end{definition}
+Eine Mannigfaltigkeit mit einem fast gerahmten (stabilen) Tangentialb\"undel hei\ss e fast (stabil) gerahmt. Eine Mannigfaltigkeit, dessen Tangentialb\"undel fast (stabil) gerahmt werden kann hei\ss e fast (stabil) parallelisierbar. 
+\begin{theorem}
+    F\"ur \(n>1\) sind zusammenh\"angende und geschlossene \(\pi\)-Mannigfaltigkeiten fast parallelisierbar.
+\end{theorem}
+\begin{proof}
+    Sei \(\mathcal{M}^n\) eine zusammenh\"angende, geschlossene \(\pi\)-Mannigfaltigkeit und \({\mathcal{D}\hookrightarrow\mathcal{M}}\) eine eingebettete Scheibe mit \(p\in\mathcal{D}\). Zun\"achst sind \({\mathcal{M}_0:=\mathcal{M}\setminus\mathring{\mathcal{D}}}\) und \(\mathcal{M}\setminus p\) homotopie\"aquivalent. Offenbar ist \(T\mathcal{M}|_{\mathcal{M}_0}\) stabil trivial. Weiter ist \(\mathcal{M}\setminus p\) eine nicht-kompakte zusammenh\"angende Mannigfaltigkeit, und enth\"alt somit einen \((n-1)\)-dimensionalen CW-Komplex \(X\) als Deformationsretrakt (siehe etwa \cite{napier2004elementary} Satz 2.2). Ist \(f\colon X\to\mathcal{M}_0\) eine Homotopie\"aquivalenz, folgt die Aussage, da \(f^*(T\mathcal{M}|_{\mathcal{M}_0})\) aufgrund von Satz \ref{thm:vec_dim_triv} trivial ist.
+\end{proof}
+Es stellt sich die Frage nach der Umkehrung dieses Satzes. Analog ergibt sich, dass eine Mannigfaltigkeit genau dann fast parallelisierbar ist, wenn sie fast stabil parallelisierbar ist. Folgendes folgt nahe \cite{kosinski1992differential} Kapitel IX Abschnitt 8.
+
+\subsubsection{Die Gruppe \texorpdfstring{\(\Omega_n^{\text{\tiny Fast}}\)}{TEXT}}
+    Die Bedeutung der fast stabil parallelisierbaren Mannigfaltigkeit liegt in der folgenden \"Uberlegung. Sei \((\mathcal{M},\mathcal{D},F)\) eine fast stabil gerahmte Mannigfaltigkeit. Dann kann an \(\mathcal{M}\) eine Chirurgie durchgef\"uhrt werden. Ist das Anklebegebiet der Chirurgie von \(\mathcal{D}\) disjunkt, und die zugeh\"orige Chirurgie an \(\mathcal{M}_0\) gerahmt, hei\ss e diese Chirurgie fast gerahmt. Zwei fast stabil gerahmte Mannigfaltigkeiten hei\ss en fast \(\chi\)-\"aquivalent, wenn eine durch eine endliche Folge von fast gerahmten Chirurgien aus der anderen erhalten werden kann. Die Menge der fast stabil gerahmten Mannigfaltigkeiten modulo fast-\(\chi\)-\"Aquivalenz sei durch \(\Omega_n^{\text{\tiny Fast}}\) bezeichnet. Dann ist die Abbildung
+    \[c\colon\Omega_n^{\text{\tiny Fast}}\to P^n,\,\eqcl{(\mathcal{M},\mathcal{D},F)}\mapsto\eqcl{(\mathcal{M}\setminus\mathring{\mathcal{D}},F)}\]
+    per Konstruktion wohldefiniert und injektiv. Folglich erbt \(\Omega_n^{\text{\tiny Fast}}\) eine kommutative Monoidstruktur von \(P^n\), sodass
+    \begin{equation}
+        0\longrightarrow\Omega_n^{\text{\tiny Fast}}\mathop{\rightarrowtail}^cP_n\mathop{\twoheadrightarrow}^{\partial}\partial P_n\longrightarrow0
+    \end{equation}
+    eine kurze exakte Folge ist. Es gilt also gerade \(\Omega_n^{\text{\tiny Fast}}\cong\ker\partial\). F\"ur \(n>5\) ist dies eine abelsche Gruppe.
+
+\subsection{Von fast- zu stabil parallelisierbar}
+    Sei \((\xi,\mathcal{D},F)\) ein fast gerahmtes Vektorb\"undel \"uber \(\mathcal{M}\). Wird \(F\) als Trivialisierung der Einschr\"ankung von \(\xi\) auf \(\mathcal{M}_0:=\mathcal{M}\setminus\mathring{\mathcal{D}}\) aufgefasst, l\"asst sich das kollabierte B\"undel \(\mu:=\xi/F\) \"uber dem Quotienten
+    \[\mathcal{M}/\mathcal{M}_0\cong\mathcal{D}/\partial\mathcal{D}\cong\mathbb{S}^n\]
+    bilden. F\"ur die Quotientenabbildung \(q\colon\mathcal{M}\to\mathcal{M}/\mathcal{M}_0\cong\mathbb{S}^n\) gilt \(\xi\cong q^*\mu\). Diese Abbildung besitzt offenbar Grad eins. Durch die Standardrahmung der Scheibe ist weiter eine Trivialisierung \(E\) der Einschr\"ankung von \(\xi\) auf \(\mathcal{D}\) gegeben. Es l\"asst sich erkennen, dass die Kupplungsfunktion von \(\mu\) gerade der Rahmenwechsel von \(F|_{\partial\mathcal{D}}\) zu \(E|_{\partial\mathcal{D}}\) ist. Besitzt \(\xi\) den Rang \(k\geq n\), so gilt
+    \[S_*\eqcl{\mu}\in\pi_{n-1}(\operatorname{SO}(k+1))\cong\pi_{n-1}(\operatorname{SO})\,.\]
+    Gem\"a\ss{} dem Periodizit\"atssatz von Bott gilt:
+    \begin{center}
+        \begin{tabular}{c|cccccccc}
+            \(n\operatorname{mod}8\) & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7\\\hline
+            \(\pi_{n-1}(\operatorname{SO})\)& \(\mathbb{Z}\) & \(\mathbb{Z}_2\) & \(\mathbb{Z}_2\) & \(0\) & \(\mathbb{Z}\) & \(0\) & \(0\) & \(0\)
+        \end{tabular}
+    \end{center}
+    F\"ur \({n\operatorname{mod}8\in\{3,5,6,7\}}\) folgt direkt \({S_*\eqcl{\mu}=0}\). Wegen \({S\xi=f^*(S\mu)}\) ist \(\xi\) also bereits stabil trivial.
+    \newpage
+    \begin{theorem}
+        Ist \(n\not=4k\), ist jede fast parallelisierbare Mannigfaltigkeit stabil parallelisierbar.
+    \end{theorem}
+    \begin{proof}
+        Es muss gezeigt werden, dass das Normalenb\"undel \(\nu\) von \(\mathcal{M}^n\) in einem hinreichend gro\ss en \(\mathbb{R}^{n+k+1}\) trivial ist. Sei \(\nu=q^*\mu\). Dann ist \(J\mu\) die normal gerahmte Mannigfaltigkeit \((\mathbb{S}^n,G)\) im \(\mathbb{R}^{n+k}\), und \(\mathcal{M}_0\subseteq\mathbb{R}_+^{n+k+1}\) ein gerahmter Nullbordismus, sodass \(\mu\in\ker J_n^k\) folgt. Da der stabile \(J\)-Homomorphismus \(J_n\) f\"ur \(n\in\{1,2\}\) injektiv ist, folgt somit \(\mu=0\) also \(\nu=0\).
+    \end{proof}
+
+\subsection{4k-dimensionale Vektorbündel}
+    Sei erneut \(\xi=q^*\mu\). Dann gilt f\"ur die Pontrjagin-Klassen \({p_i(\xi)\in H^{4i}(\mathcal{M})}\) und \({p_i(\mu)\in H^{4i}(\mathbb{S}^{4m})}\) 
+    \[p_i(\xi)=p_i(q^*\mu)=q^*p_i(\mu)\,.\]
+    Da f\"ur \(i<k\) stets \(H^{4i}(\mathbb{S}^{4m})=0\) gilt, m\"ussen also alle niederen Pontrjagin-Klassen von \(\xi\) null sein. Dann ist durch
+    \[P\colon\pi_{4m-1}(\operatorname{SO})\to\mathbb{Z},\,\eta\mapsto\big\langle p_k(\eta),\eqcl{\mathbb{S}^{4m}}\big\rangle\]
+    ein Homomorphismus definiert. Dass dies tats\"achlich ein Homomorphismus ist, folgt aus der Na\-t\"ur\-lich\-keit der Pontrjagin-Klassen. Gem\"a\ss{} \cite{kervaire1959obstructions} ist \(P\) ein Monomorphismus, und es gilt
+    \begin{equation}\label{eq:pont_hom_multiple}
+        p(x)\quad\text{ist ein Vielfaches von}\quad\frac{3+(-1)^{m+1}}{2}(2m-1)!\,.
+    \end{equation}
+    \begin{lemma}\label{lem:4m_stable_pont}
+        Ein \(4m\)-dimensionales, fast parallelisierbares Vektorb\"undel \(\xi\) \"uber \(\mathcal{M}^{4m}\) ist genau dann stabil trivial, wenn \(p_m(\xi)=0\) ist.
+    \end{lemma}
+    \begin{proof}
+        Ist \(\xi\) stabil trivial, ist \(p_m(\xi)=0\). Sei umgekehrt \(p_m(\xi)=0\) und \(\xi\cong q^*\mu\). Da \(q\) den Grad eins besitzt, muss auch \(p_m(\mu)=0\) sein. Dann ist
+        \[P(\mu\oplus\underline{\mathbb{R}})=\langle p_m(\mu\oplus\underline{\mathbb{R}}),\eqcl{\mathbb{S}^n}\rangle=\langle p_m(\mu),\eqcl{\mathbb{S}^n}\rangle=0\,,\]
+        da \(P\) ein Monomorphismus ist, ist \(\mu\) und somit auch \(\xi\) stabil trivial.
+    \end{proof}
+    \begin{theorem}
+        Eine fast parallelisierbare Mannigfaltigkeit \(\mathcal{M}^{4m}\) ist genau dann stabil parallelisierbar, wenn \(\sigma(\mathcal{M})=0\) gilt.
+    \end{theorem}
+    \begin{proof}
+        Sei \(p_i:=p_i(T\mathcal{M})\). Es sei daran erinnert, dass \(p_i=0\) f\"ur \(i<m\) ist. Der Signatursatz von Hirzebruch impliziert deshalb, dass die Signatur ein nicht-triviales Vielfaches von \(\langle p_m,\eqcl{\mathcal{M}}\rangle\) ist. Somit ist \(p_m=0\) genau dann, wenn \(\sigma(\mathcal{M})=0\) ist. Die Aussage folgt aus Lemma \ref{lem:4m_stable_pont}.
+    \end{proof}
+
+    \begin{corollary}\label{cor:hom_pi}
+        Homotopiesph\"aren sind \(\pi\)-Mannigfaltigkeiten.
+    \end{corollary}
+    
+    \newpage
+    \begin{theorem}\label{thm:almost_sign_image}
+        Das Bild von \(\sigma\colon\Omega_{4m}^{\text{\tiny Fast}}\to\mathbb{Z}\) besitzt ist gerade \(\abs{t_m}\cdot\mathbb{Z}\) mit
+        \[t_m:=2^{2m}\left(2^{2m-1}-1\right)\left(3+(-1)^{m+1}\right)\,\text{\upshape Z\"ahler}\left(\frac{B_{2m}}{4m}\right)\,.\]
+    \end{theorem}
+    \begin{proof}
+        Sei \((\mathcal{M},\mathcal{D},F)\in\Omega_{4m}^{\text{\tiny Fast}}\) eine fast gerahmte Mannigfaltigkeit. Sei \(\nu\) das Normalenb\"undel von \(\mathcal{M}\) in einem hinreichend gro\ss en \(\mathbb{R}^m\), und \(\nu=q^*\mu\) f\"ur ein Vektorb\"undel \(\mu\) \"uber \(\mathbb{S}^{4m}\). Erneut liegt die Kupplungsfunktion von \(\mu\) im Kern des stabilen \(J\)-Homomorphismus \(J_{4m-1}\). Sei \(g\in\pi_{4m}(\operatorname{SO})\cong\mathbb{Z}\) ein Generator. Da das Bild von \(J_{4m-1}\) eine zyklische Gruppe des Ranges \(j_{4m-1}\) ist, sind Elemente dieses Kernes Vielfache von
+        \[j_{4m-1}\cdot g\mathop{=}^{\text{\tiny\ref{prop:adams_order}}}\text{Nenner}\left(\frac{B_{2m}}{4m}\right)\cdot g\,.\]
+        Somit folgt zusammen mit \eqref{eq:pont_hom_multiple} bereits, dass
+        \[P(\mu)\quad\text{ein Vielfaches von}\quad\text{Nenner}\left(\frac{B_{2m}}{4m}\right)\frac{3+(-1)^{m+1}}{2}(2m-1)!\]
+        ist. Da \(q\) vom Grad eins ist gilt weiter
+        \[\left\langle p_m(\nu),\eqcl{\mathcal{M}}\right\rangle=\left\langle q^*p_m(\mu),\eqcl{\mathcal{M}}\right\rangle=\left\langle p_m(\mu),q_*\eqcl{\mathcal{M}}\right\rangle=\left\langle p_m(\mu),\eqcl{\mathbb{S}^{4m}}\right\rangle=P(\mu)\,.\]
+        Sei \(\tau\) das Tangentialb\"undel von \(\mathcal{M}\), so gilt
+        \[0=p_m(\tau)=p_m(\nu)+p_m(\tau)\quad\text{also}\quad p_m(\tau)=\pm p_m(\nu)=\pm p_m(\mu)\,.\]
+        Aus dem Signatursatz \ref{prop:signature_thm} zusammen mit Proposition \ref{prop:signature_coeff} folgt
+        \[\sigma(\mathcal{M})=(-1)^m\frac{2^{2m}(2^{2m-1}-1)B_{2m}}{(2m)!}\langle p_m(\tau),\eqcl{\mathcal{M}}\rangle\]
+        und ist deshalb ein Vielfaches von
+        \begin{align*}
+            &\frac{2^{2m}(2^{2m-1}-1)B_{2m}}{(2m)!}\text{Nenner}\left(\frac{B_{2m}}{4m}\right)\frac{3+(-1)^{m+1}}{2}(2m-1)!\\
+            =\,&\frac{2^{2m}(2^{2m-1}-1)B_{2m}}{4m}\text{Nenner}\left(\frac{B_{2m}}{4m}\right)\left(3+(-1)^{m+1}\right)
+        \end{align*}
+        ist. Der Nenner l\"asst sich weiter vereinfachen, denn aus
+        \[x=\frac{\text{\upshape Z\"ahler}(x)}{\operatorname{Nenner}(x)}\quad\text{folgt}\quad\frac{B_{2m}}{4m}\text{Nenner}\left(\frac{B_{2m}}{4m}\right)=\text{\upshape Z\"ahler}\left(\frac{B_{2m}}{4m}\right)\,.\]
+        Zusammen ist also \(\sigma(\mathcal{M})\) ein Vielfaches von \(t_m\). Umgekehrt l\"asst sich eine Mannigfaltigkeit mit Signatur \(t_m\) konstruieren.
+    \end{proof}

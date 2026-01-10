@@ -1,0 +1,40 @@
+Verklebungen sind von besonders einfacher Natur, wenn das Normalenb\"undel der geteilten Mannigfaltigkeit trivial ist. Um dies zu entscheiden ist der Begriff der Kupplungsfunktion n\"otig. Durch diese l\"asst sich die Frage der Trivialit\"at eines Vektorb\"undels \"uber einer Sph\"are auf ein algebraisches Element in \(\eqcl{\gamma}\in\pi_k(\operatorname{SO}(n))\) reduzieren. Somit liegt es nahe, die Struktur dieser Gruppe zu untersuchen. Das kleine Problem besteht hierbei darin, dass die Berechnung dieser Gruppen im allgemeinen spektakul\"ar aufw\"andig ist. Die niedrigdimensionalen Beispiele sind \cite{lundell1992tables}:
+\begin{center}
+    \begin{tabular}{c|cccccccccc}
+         & \(\pi_1\)         & \(\pi_2\) & \(\pi_3\)                     & \(\pi_4\)                         & \(\pi_5\) & \(\pi_6\) & \(\pi_7\) & \(\pi_8\) & \(\pi_9\) & \(\pi_{10}\)\\\hline\\[-12pt]
+        \footnotesize\(\operatorname{SO}(3)\)& \(\mathbb{Z}_2\)  & \(0\)     & \(\mathbb{Z}\)                & \(\mathbb{Z}_2\)                  & \(\mathbb{Z}_2\) & \(\mathbb{Z}_{12}\) & \(\mathbb{Z}_2\) & \(\mathbb{Z}_2\) & \(\mathbb{Z}_3\) & \(\mathbb{Z}_{15}\)\\
+        \footnotesize\(\operatorname{SO}(4)\)& \(\mathbb{Z}_2\)             & \(0\)     & \(\mathbb{Z}^{\oplus2}\)& \(\mathbb{Z}_2^{\oplus2}\)& \(\mathbb{Z}_2^{\oplus2}\) & \(\mathbb{Z}_{12}^{\oplus2}\) & \(\mathbb{Z}_2^{\oplus2}\) & \(\mathbb{Z}_2^{\oplus2}\) &  \(\mathbb{Z}_3^{\oplus2}\) & \(\mathbb{Z}_{15}^{\oplus2}\)\\
+        \footnotesize\(\operatorname{SO}(5)\)& \(\mathbb{Z}_2\)             & \(0\)     & \(\mathbb{Z}\)                & \(\mathbb{Z}_2\)                  & \(\mathbb{Z}_2\) & \(0\) & \(\mathbb{Z}\) & \(0\) & \(0\) & \(\mathbb{Z}_{120}\)\\
+        \footnotesize\(\operatorname{SO}(6)\)& \(\mathbb{Z}_2\)             & \(0\)     & \(\mathbb{Z}\)                         & \(0\)                             & \(\mathbb{Z}\) & \(0\) & \(\mathbb{Z}\) & \(\mathbb{Z}_{24}\) & \(\mathbb{Z}_2\) & \(\mathbb{Z}_2\oplus\mathbb{Z}_{120}\)\\
+        \footnotesize\(\operatorname{SO}(7)\)& \(\mathbb{Z}_2\)             & \(0\)     & \(\mathbb{Z}\)                         & \(0\)                             & \(0\) & \(0\) & \(\mathbb{Z}\) & \(\mathbb{Z}_2^{\oplus2}\) & \(\mathbb{Z}_2^{\oplus2}\) & \(\mathbb{Z}_8\)\\
+    \end{tabular}
+\end{center} 
+Es l\"asst sich erkennen dass sich die \(\pi_k(\operatorname{SO}(n))\) f\"ur \(n\geq k+2\) \textit{stabilisieren}, es gilt also \(\pi_k(\operatorname{SO}(n))\cong\pi_k(\operatorname{SO}(n+1))\). Dies f\"uhrt zu dem Begriff der \textbf{stabilen Homotopiegruppen} von \(\operatorname{SO}(n)\). Definiere durch die nat\"urliche Inklusion
+\[\operatorname{SO}:=\underrightarrow{\operatorname{colim}}\operatorname{SO}(n)\,,\]
+so sind die Homotopiegruppen durch den Periodizit\"atssatz von Bott \cite{bott1959classical} komplett bestimmt. Es gilt:
+\begin{center}
+    \begin{tabular}{c|cccccccc}
+         \(n\operatorname{mod}8\) & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7\\\hline\\[-12pt]
+        \(\pi_n(\operatorname{SO})\)& \(\mathbb{Z}_2\) & \(\mathbb{Z}_2\) & \(0\) & \(\mathbb{Z}\) & \(0\) & \(0\) & \(0\) & \(\mathbb{Z}\)
+    \end{tabular}
+\end{center}
+
+\newpage
+\section{Vektorbündel \"uber Sph\"aren}
+    \input{Kapitel/Homotopietheorie/Sek-Vektorbündel}
+
+\section{Rahmungen}
+    \input{Kapitel/Homotopietheorie/Sek-Rahmungen.tex}
+
+\section{Die Einh\"angung}
+    \input{Kapitel/Homotopietheorie/Sek-Einhängung.tex}
+    
+\newpage
+\section{Homotopiesph\"aren}
+    \input{Kapitel/Homotopietheorie/Sek-Homotopiesphären.tex}
+
+\section{Die Thom-Pontrjagin-Konstruktion}
+    \input{Kapitel/Homotopietheorie/Sek-ThomPontryaginKonstruktion}
+
+\section{Der \texorpdfstring{\(J\)}{TEXT}-Homomorphismus}
+    \input{Kapitel/Homotopietheorie/Sek-JHomomorphismus}

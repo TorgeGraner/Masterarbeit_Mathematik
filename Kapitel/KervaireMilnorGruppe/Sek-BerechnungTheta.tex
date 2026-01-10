@@ -1,0 +1,42 @@
+Sei \(p\colon\Omega_n^{\text{\tiny Fr}}\to\Pi_n\) der stabile Thom-Pontrjagin-Isomorphismus, und \(p(\mathcal{M})\subseteq\Pi_n\) die Menge jener stabilen Kollaps\-ab\-bil\-dung\-en, die mit verschiedenen normalen Rahmungen von \(\mathcal{M}\) in hinreichend gro\ss en \(\mathbb{R}^{n+k}\) korrespondieren. Sei \(\Sigma_n\subseteq\Pi_n\) die Menge der Abbildungen, die mit gerahmten Homotopiesph\"aren korrespondieren.
+\begin{theorem}
+    Die Menge \(p(\mathbb{S}^n)\subseteq\Sigma_n\) ist ein Normalteiler und
+    \[\Phi\colon\Theta_n\to\Sigma_n/p(\mathbb{S}^n),\,\eqcl{\Sigma}\mapsto p(\Sigma)\]
+    ein wohldefinierter Epimorphismus.
+\end{theorem}
+\begin{proof}
+    Es gelten
+    \begin{itemize}
+        \item[i] \(\mathcal{M}+\mathbb{S}^n\cong\mathcal{M}\) f\"ur geschlossene Mannigfaltigkeiten \(\mathcal{M}\) und
+        \item[ii]\(\Sigma+(-\Sigma)\cong\mathbb{S}^n\) f\"ur Homotopiesph\"aren \(\Sigma\).
+    \end{itemize}
+    Dass \(p(\mathbb{S}^n)\) ein Normalteiler ist, folgt aus \(\mathbb{S}^n+\mathbb{S}^n\cong\mathbb{S}^n\). F\"ur gerahmte Homotopiesph\"aren \((\Sigma,F)\) gilt einerseits
+    \[-p(\Sigma,F)+p(\Sigma,F^{\prime})=p(\mathbb{S}^n,H)\quad\text{also}\quad p(\Sigma,F^{\prime})=p(\Sigma,F)+p(\mathbb{S}^n,H)\,,\]
+    also \(p(\Sigma)\subseteq p(\Sigma,F)+p(\mathbb{S}^n)\). Andererseits gilt
+    \[p(\Sigma,F)+p(\mathbb{S}^n,G)\in p(\Sigma)\]
+    und somit \(p(\Sigma,F)+p(\mathbb{S}^n)\subseteq p(\Sigma)\). Folglich ist \(p(\Sigma)\) eine Nebenklasse von \(p(\mathbb{S}^n)\). Sind zwei Homotopiesph\"aren H-Kobordant, ergibt ein H-Kobordismus eine Homotopie \(p(\Sigma_1,F_1)\simeq p(\Sigma_2,F_2)\). Die Surjektivit\"at folgt, da jede Homotopiesph\"are gem\"a\ss{} Korollar \ref{cor:hom_pi} eine \(\pi\)-Mannigfaltigkeit ist, sodass ihr stabiles Normalenb\"undel eine Rahmung zul\"asst und deshalb im Bild von \(\Phi\) liegt.
+\end{proof}
+Beachte, dass \(p(\mathbb{S}^n)\) gerade das Bild des \(J\)-Homomorphismus \(J_n\) ist. Somit existiert eine Folge
+\begin{equation}\label{eq:calc_theta_1}
+    0\to\partial P^{n+1}\rightarrowtail\Theta_n\xrightarrow{\Phi}\Sigma_n/\im J_n\to0\,.
+\end{equation}
+Wenn \(\Phi(\Sigma)=0\) gilt, existiert eine Rahmung von \(\Sigma\), bez\"uglich welcher \((\Sigma,F)\) gerahmt nullbordant ist. Somit muss \(\Sigma\in\partial P^{n+1}\) liegen, also ist Folge \ref{eq:calc_theta_1} exakt. Da \(\Sigma_n/\im J_n\) der Quotient der Untergruppe \(\Sigma_n\subseteq\Pi_n\) und \(\Pi_n\) endlich ist, folgt:
+\begin{corollary}
+    Die Kervaire-Milnor-Gruppe \(\Theta_k\) ist f\"ur \(k\geq4\) endlich.
+\end{corollary}
+Zusammen mit der kurzen exakten Folge
+\[0\to\Sigma_k/\im J_k\to\Pi_k/\im J_k\to\Pi_k/\Sigma_k\to0\,,\]
+in welcher der mittlere Term gerade \(\operatorname{Coker} J_k\) ist, ergibt sich f\"ur eine Berechnung von \(\Theta_k\) die exakte Folge
+\begin{equation}\label{eq:calc_theta_2}
+    0\to\partial P^{k+1}\to\Theta_k\to\operatorname{Coker}J_k\to\Pi_k/\Sigma_k\to0\,.
+\end{equation}
+Es gilt (\cite{kosinski1992differential} Kapitel IX Satz 6.7)
+\[\Pi_k/\Sigma_k\cong\begin{cases}
+    \mathbb{Z}_2 & k\in\{2,6,14,30,62,126\}\\
+    0 & \text{sonst}
+\end{cases}\,.\]
+Da das Bild von \(J_k\) bekannt ist, reduziert sich die Berechnung der Gruppe der Homotopiesph\"aren \(\Theta_k\) somit auf die stabilen Homotopiegruppe der Sph\"are \(\Pi_k\), die gr\"o\ss tenteils unbekannt sind. Beispielsweise ergibt dies f\"ur \(n=7\)
+\[0\to\partial P^8\to\Theta_7\to\operatorname{Coker}J_7\to0\,.\]
+Wegen \(\Pi_7\cong\im J_7\) folgt 
+\[\Theta_7\cong\partial P^8\mathop{\cong}^{\text{\tiny\eqref{eq:partialp8}}}\mathbb{Z}_{28}\,,\]
+also existieren genau \(28\) exotische Sph\"aren der Dimension \(7\).

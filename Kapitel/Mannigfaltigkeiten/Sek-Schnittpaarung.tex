@@ -1,0 +1,38 @@
+Sei \(\mathcal{W}^n\) eine Mannigfaltigkeit und \(i+j=n\). Dann l\"asst sich \"uber die Kronecker-Paarung und Poincar\'e-Dualit\"at eine Bilinearform
+\[\mathrel{-}\cdot\mathrel{-}\,\colon H_i(\mathcal{W})\otimes H_j(\mathcal{W})\to\mathbb{Z},\,x\cdot y:=\left\langle x^*\smile y^*,\eqcl{\mathcal{W}}\right\rangle\]
+definieren. Aus den Eigenschaften des Cup-Produktes folgt einerseits
+\begin{equation}\label{eq:intersect_prop_1}
+    x\cdot y=\left\langle x^*\smile y^*,\eqcl{\mathcal{W}}\right\rangle=(-1)^{ij}\left\langle y^*\smile x^*,\eqcl{\mathcal{W}}\right\rangle=(-1)^{ij}(y\cdot x)\,,
+\end{equation}
+aus den Eigenschaften der Kroneckerpaarung ergibt sich
+\begin{equation}\label{eq:intersect_prop_2}
+    x\cdot y=\langle x^*\smile y^*,\eqcl{\mathcal{W}}\rangle=\langle q^*x^*,y^*\frown\eqcl{\mathcal{W}}\rangle=\langle q^*x^*,y\rangle\,.
+\end{equation}
+Da \(\mathcal{M}\) eine orientierbare Mannigfaltigkeit ist, besitzt die Auswertungsabbildung eine besonders einfache Form. Es gilt:
+\begin{lemma}\label{lem:intersect_factor}
+    Die Abbildung \({\operatorname{Ad}\colon H_i(\mathcal{M})\to\operatorname{Hom}(H_j(\mathcal{M}),\mathbb{Z}),\,x\mapsto x\cdot(\mathrel{-})}\) ist gleich der Komposition
+    \[H_i(\mathcal{M})\mathop{\longrightarrow}^{q_*}H_i(\mathcal{M},\partial\mathcal{M})\mathop{\longrightarrow}^{\text{\tiny P.D.}}H^j(\mathcal{M})\mathop{\longrightarrow}^{\text{\tiny U.K.}}\operatorname{Hom}(H_j(\mathcal{M}),\mathbb{Z})\,.\]
+\end{lemma}
+\begin{proof}
+    Die Komposition bildet \({x\in H_i(\mathcal{M})}\) auf \({\langle\left(q_*(x)\right)^*,\mathrel{-}\rangle}\) ab, wobei aus Diagramm \ref{diag:poin_exact} folgt, dass die Gleichung \({(q_*(x))^*=q^*x^*}\) gilt. Dies zeigt
+    \[\langle(q_*(x))^*,\mathrel{-}\rangle=\langle q^*x^*,\mathrel{-}\rangle\mathop{=}^{\text{\tiny\eqref{eq:intersect_prop_2}}}x\cdot(\mathrel{-})=\operatorname{Ad}(x)\,.\]
+\end{proof}
+\newpage
+\begin{corollary}\label{crl:intersect_uni}
+    Sei \(\mathcal{M}^{i+j}\) derart, dass \({H_i(\partial\mathcal{M})=H_{i-1}(\partial\mathcal{M})=0}\) gilt und \(H_{j-1}(\mathcal{M})\) frei ist. Dann ist \(\mathrel{-}\cdot\mathrel{-}\) unimodular.
+\end{corollary}
+\begin{proof}
+    Betrachte die Faktorisierung
+    \[\operatorname{Ad}\colon H_i(\mathcal{M})\mathop{\longrightarrow}^{q_*}H_i(\mathcal{M},\partial\mathcal{M})\mathop{\longrightarrow}^{\text{\tiny P.D.}}H^j(\mathcal{M})\mathop{\longrightarrow}^{\text{\tiny U.K.}}\operatorname{Hom}(H_j(\mathcal{M}),\mathbb{Z})\]
+    gem\"a\ss{} Lemma \ref{lem:intersect_factor}. Aus den Annahmen folgt, dass alle Abbildungen isomorphismen sind.
+\end{proof}
+Die derart definierte Schnittform ist besonders interessant, wenn \(\mathcal{M}\) gerade Dimension besitzt und \(i=j\) gilt. In diesem Fall hei\ss e die Bilinearform \textbf{Schnittform}.
+\commend{
+    Seien \(\mathcal{M}\) und \(\mathcal{N}\) Untermannigfaltigkeiten komplement\"arer Dimension in \(\mathcal{W}\). Definiere ihre \textbf{Schnittzahl} durch
+    \[\mathcal{M}\cdot\mathcal{N}:=\eqcl{\mathcal{M}\mathrel{|}\mathcal{W}}\cdot\eqcl{\mathcal{N}\mathrel{|}\mathcal{W}}\,.\]
+    Diese Definition l\"asst sich geometrisch interpretieren. Ohne die Isotopieklasse von \(\mathcal{M}\) oder \(\mathcal{N}\) zu ver\"andern, kann angenommen werden, dass sich die beiden Mannigfaltigkeiten transversal schneiden. In diesem Fall ist \(\mathcal{V}:=\mathcal{M}\cap\mathcal{N}\) eine nulldimensionale Mannigfaltigkeit, die folglich aus endlich vielen Punkten besteht. In jedem Punkt \(p\in\mathcal{V}\) existiert nun aufgrund der Transversalit\"at eine direkte Summenzerlegung \(T_p\mathcal{W}=T_p\mathcal{M}\oplus T_p\mathcal{N}\). Eine positiv orientierte Basis von \(T_p\mathcal{M}\) zusammen mit einer positiv orientierten Basis von \(\mathcal{N}\) ergibt eine Basis von \(T_p\mathcal{W}\). Setze \(\epsilon_p:=1\), falls die zusammengesetzte Basis erneut positiv orientiert, und \(\epsilon_p:=-1\) sonst. Dann gilt
+    \[\mathcal{M}\cdot\mathcal{N}\mathop{=\sum\epsilon_p}_{p\in\mathcal{M}\cap\mathcal{N}}\,.\]
+    Dies folgt, da f\"ur transversale Mannigfaltigkeiten \(\mathcal{M}\) und \(\mathcal{N}\) die Identit\"at
+    \[\eqcl{\mathcal{M}\cap\mathcal{N}\mathrel{|}\mathcal{W}}^*=\eqcl{\mathcal{M}\mathrel{|}\mathcal{W}}^*\smile\eqcl{\mathcal{N}\mathrel{|}\mathcal{W}}^*\in H^n(\mathcal{W})\]
+    gilt, und eine Orientierung einer nulldimensionalen Mannigfaltigkeit \(\mathcal{V}\) gerade eine Wahl von \(\pm1\) f\"ur jeden Punkt \(p\in\mathcal{V}\) ist [REF].
+}

@@ -1,0 +1,42 @@
+Ein wichtiger Satz, welcher f\"ur die Berechnung von \(P_{4k}\) ben\"otigt wird, ist der Signatursatz von Hirzebruch. Er besagt, dass ein bestimmtes Polynom \(L_k\) existiert, sodass sich die Signatur durch die Pontrjagin-Klassen des Tangential\-b\"un\-dels \(p_i\) wie folgt darstellen l\"asst:
+\[\sigma(\mathcal{M})=\langle L_k(p_1,\dots,p_k),\eqcl{\mathcal{M}}\rangle\,.\]
+Um diese \(L\)-Polynome zu definieren, ist etwas Kombinatorik vonn\"oten. Das Folgende sei nur ein kurzer Anriss der eigentlichen Thematik, f\"ur eine pr\"azisere Abhandlung des Satzes siehe zum Beispiel \cite{milnor1974characteristic} \S19. 
+
+\subsection{Multiplikative Folgen}
+    Eine Folge \(K_i\in\Lambda\eqcl{X_1,\dots,X_i}\) homogener Polynome \(i\)-ten Grades hei\ss e multiplikativ, wenn \(K_0=1\) ist und f\"ur alle formalen Potenzreihen \(a,b,c\in\Lambda[[t]]\) mit Leitkoeffizient \(1\) und \(c=ab\) die Gleichung
+    \[\sum_{i\geq0}K_i(c_1,\dots,c_i)t^i=\bigg(\sum_{i\geq0}K_i(a_1,\dots,a_i)t^i\bigg)\bigg(\sum_{i\geq0}K_i(b_1,\dots,b_i)t^i\bigg)\,,\]
+    gilt. Schreibe auch \(K(ab)=K(a)K(b)\). Zu jeder multiplikativen Folge geh\"ort nun die \textbf{charakteristische Potenzreihe} \(K(1+t)\in\Lambda[[t]]\). Dass die Korrespondenz von multiplikativen Folge zu ihren charakteristischen Potenzreihen bijektiv ist, ist durch folgenden Satz gegeben.
+    \begin{proposition}
+        Zu jeder Potenzreihe \(f\in\Lambda[[t]]\) existiert genau eine multiplikative Folge \(K_i\) mit \(K(1+t)=f(t)\).
+    \end{proposition}
+    Die zu der Potenzreihe
+    \[\frac{\sqrt{x}}{\tanh(\sqrt{x})}=\sum_{k\geq0}\frac{2^{2k}B_{2k}}{(2k)!}x^k\]
+    geh\"orende Folge sei im Folgenden mit \(L_k\) bezeichnet, f\"ur eine \(4k\)-di\-men\-sio\-na\-le geschlossene und orientierte Manngifaltigkeit sei
+    \[\mathcal{L}(\mathcal{M}):=\langle L_k(p_1,\dots,p_k),\eqcl{\mathcal{M}}\rangle\]
+    der \textbf{L-Genus}, wobei \(p_j\) die \(j\)-te Pontrjagin-Klasse von \(T\mathcal{M}\) bezeichne. Die Wahl der charakteristischen Potenzreihe wirkt zun\"achst etwas willk\"urlich, kann jedoch als Normalisierung verstanden werden. Durch sie kann
+    \[\mathcal{L}\left(\mathbb{C}P^{2m}\right)=1\]
+    garantiert werden.
+
+    \subsubsection{Der orientierte Kobordismusring}
+        Zusammen mit der disjunkten Vereinigung bildet die Menge der orientierten Kobordismusklassen orientierter geschlossener Mannigfaltigkeiten \(\Omega_k^{\text{\tiny Or}}\) eine abelsche Gruppe. Diese wird von den Produkten \(\mathbb{C}P^{2n_1}\times\dots\times\mathbb{C}P^{2n_{\ell}}\) f\"ur alle Zerlegungen \(\sum n_i=k\) erzeugt. Dann erh\"alt
+        \[\Omega_*^{\text{\tiny Or}}:=\bigoplus_{k\geq0}\Omega_{4k}^{\text{\tiny Or}}\,.\]
+        mithilfe des kartesischen Produkts die Struktur eines graduierten Ringes. Insbesondere bilden die \(\mathbb{C}P^{2k}\) eine Basis des torsionsbefreiten Kobordismusrings \(\Omega_*^{\text{\tiny Or}}\otimes\mathbb{Q}\).
+    \begin{proposition}
+        Die Abbildung \(\mathcal{L}\colon\Omega_*^{\text{\tiny Or}}\otimes\mathbb{Q}\to\mathbb{Q},\,\mathcal{M}\mapsto\mathcal{L}\left(\mathcal{M}\right)\) ist ein Ringhomomorphismus.
+    \end{proposition}
+    Der Signatursatz von Hirzebruch ist nun eine direkte Konsequenz aus dem vorangegangenen Satz. Sowohl \(\sigma\) als auch \(\mathcal{L}\) definieren Ringhomomorphismen \(\Omega_*^{\text{\tiny Or}}\otimes\mathbb{Q}\to\mathbb{Q}\), und auf der Menge der Generatoren \(\mathbb{C}P^{2k}\) gilt
+    \[\sigma\left(\mathbb{C}P^{2k}\right)=1=\mathcal{L}\left(\mathbb{C}P^{2k}\right)\,.\]
+    Dies zeigt:
+    \begin{proposition}[Signatursatz von Hirzebruch]\label{prop:signature_thm}
+        Die Signatur \(\sigma(\mathcal{M})\) einer geschlossenen Mannigfaltigkeit \(\mathcal{M}\) ist gleich dem L-Genus \(\mathcal{L}(\mathcal{M})\).
+    \end{proposition}
+    F\"ur das Folgende ist noch ein weiterer Satz vonn\"oten.
+    \begin{proposition}\label{prop:signature_coeff}
+        Der Koeffizient von \(p_k\) in \(L_k(p_1,\dots,p_k)\) ist
+        \[s_k=(-1)^k\frac{2^{2k}(2^{2k-1}-1)B_{2k}}{(2k)!}\,.\]
+    \end{proposition}
+    \begin{proof}
+        Siehe \cite{hirzebruch1966topological} Lemma 1.4.1 und Abschnitt 1.5.
+    \end{proof}
+    Die in diesem Satz auftauchenden Koeffizienten berechnen sich hierbei aus den Koeffizienten der Potenzreihe
+    \[\frac{x}{\sinh(2x)}=\sum_{k\geq0}\frac{2^{2k}(2^{2k-1}-1)B_{2k}}{(2k)!}x^{2k}\,.\]

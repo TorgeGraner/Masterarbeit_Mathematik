@@ -1,0 +1,89 @@
+Sei \({n=i+j+1}\), \(\mathcal{M}^n\) eine \(\pi\)-Mannigfaltigkeit und \(\Psi\colon\underline{\mathbb{D}}^{j+1}\hookrightarrow\mathring{\mathcal{M}}\) eine beliebige Anklebeeinbettung. Bezeichne durch \(\mathcal{S}:=\Psi(\mathbb{S}^i\times\mathbf{0})\) die Anklebesph\"are. Die naive Chirurgie bez\"uglich dieser Daten kann unter Umst\"anden eine Mannigfaltigkeit liefern, die nicht stabil parallelisierbar ist. Um dem beizukommen, reicht es aus, die Anklebeeinbettungen mithilfe von einer glatten Funktion \(\gamma\colon\mathbb{S}^i\to\operatorname{SO}(j+1)\) informiert zu \textit{verdrehen}. 
+
+Sei \(F\) eine stabile Rahmung von \(\mathcal{M}\). Eine stabile Rahmung \(\overline{F}\) auf \(\mathcal{M}\multimap\mathbb{S}^i\) induziert offenbar eine Rahmung von \(\mathcal{M}\setminus\mathcal{S}\). Ist diese induzierte stabile Rahmung zu \(F\) homotop, hei\ss e die Chirurgie gerahmt. 
+
+Zu einer Folge gerahmter Mannigfaltigkeiten \((\mathcal{M}_i,F_i)\) mit \(1\leq i\leq m\), sodass \(\mathcal{M}_{i+1}\) durch gerahmte Chirurgie aus \(\mathcal{M}_i\) erhalten werden kann, hei\ss en \(\mathcal{M}_1\) und \(\mathcal{M}_m\) zueinander \textbf{\(\chi\)-\"aquivalent}. Diese Relation ist offenbar reflexiv und transitiv. Sie ist symmetrisch, denn wird an der transversalen Sph\"are einer \(i\)-Chirurgie eine \(j\)-Chirurgie durchgef\"uhrt, ergibt sich erneut die originale Mannigfaltigkeit. Derart ist also eine \"Aquivalenz\-re\-la\-tion definiert.
+
+\subsection{Strategie der Berechnung von \texorpdfstring{\(\Theta_k\)}{TEXT}}
+    Sei \(P^k\) die Menge der \(\chi\)-\"Aquivalenzklassen gerahmter Mannigfaltigkeiten, die Homotopiesph\"aren beranden. Diese sei mit der verbundenen Randsumme versehen, sodass \(P^k\) die Struktur eines kommutativen Monoiden erh\"alt. Da Chirurgie stets am Inneren vorgenommen wird, hat diese keinen Einfluss auf den Rand, sodass \(\chi\)-\"aquivalente, gerahmte Mannigfaltigkeiten stets diffeomorphe R\"ander besitzen. Es folgt, dass der Randoperator \(\partial\colon P_k\to\Theta_k\) ein wohldefinierter Homomorphismus ist. Die Berechnung dieser Untergruppe ist der erste Schritt in der Berechnung von \(\Theta_k\). Es existiert die offensichtliche exakte Folge
+    \[0\to\ker\partial\to P^k\mathop{\longrightarrow}^{\partial}\partial P^k\to0\,.\]
+    Der Kern besteht hierbei gerade aus all den \(\chi\)-\"Aquivalenzklassen gerahmter Mannigfaltigkeiten, deren Rand zu der Standardsph\"are diffeomorph ist. Um die Gruppe \(\partial P^k\subseteq\Theta_k\) zu berechnen wird eine Mannigfaltigkeit aus \(P^k\) nun so lange durch gerahmte Chirurgie bearbeitet, bis sie m\"oglichst simpel ist. 
+
+\subsection{Rahmbarkeit und Reparametrisierung}
+    Sei erneut \({n=i+j+1}\), \((\mathcal{M}^n,F)\) eine stabil gerahmte Mannigfaltigkeit und \({\Psi\colon\underline{\mathbb{D}}^{j+1}\hookrightarrow\mathring{\mathcal{M}}}\) eine Anklebeeinbettung. Es soll untersucht werden, wann eine Verklebung mit der Standard-Sph\"are \((\mathbb{S}^n,E\)) eine stabil gerahmte Mannigfaltigkeit ergibt. Zun\"achst ist \(F(p)\) eine Basis von \({T_p\mathcal{M}\oplus\mathbb{R}}\) und \(E(p)\) eine Basis von \({T_p\mathbb{S}^n\oplus\mathbb{R}}\). Wird eine Umgebung von \({\mathbb{S}^i\subseteq\mathbb{S}^n}\) mit dem Definitionsbereich von \(\Psi\) identifiziert, ist die Einh\"angung des Differentials von \(\Psi\) eine Funktion
+    \[S(\dx_p\Psi)\colon T_p\mathbb{S}^n\oplus\mathbb{R}\to T_{\Psi(p)}\mathcal{M}\oplus\mathbb{R}\,.\]
+    Derart wird \(E\) zu einer stabilen Rahmung von \(\im\Psi\subseteq\mathcal{M}\) transportiert. Bezeichne jene Rahmung durch \(\dx\Psi(E)\). Sei \(\sigma(F,\Psi)\) der Rahmenwechsel von \(\dx\Psi(E)\) zu \(F\) auf \(\Psi(\mathbb{S}^i\times\mathbf{0})\). Da der Basiswechsel der transportierten Basis zu \(F\) gerade die Abbildungsmatrix von \(S(\dx_p\Psi)\) bez\"uglich \(E\) und \(F\) ist, gilt mit \(q=\Psi(p,0)\)
+    \[\sigma(F,\Psi)\colon\mathbb{S}^i\to\operatorname{GL}^+(n+1),\,p\mapsto M_{F(q)}^{E(p,0)}\left(S(\dx_{(p,0)}\Psi)\right)\,.\]
+    Derart wird ein Element \({\mathfrak{o}(F,\Psi):=\eqcl{\sigma(F,\Psi)}\in\pi_i(\operatorname{SO}(n+1))}\) definiert. Wegen folgendem Lemma kann \(\mathfrak{o}(F,\Psi)\) als Obstruktion betrachtet werden.
+    \begin{lemma}\label{lem:nullhom_frame}
+        Sei \((\mathcal{M},F)\) eine gerahmte Mannigfaltigkeit und \(\Psi\colon\underline{\mathbb{D}}^{j+1}\hookrightarrow\mathring{\mathcal{M}}\) eine An\-kle\-be\-ein\-bet\-tung. Dann ist die Verklebung von \((\mathcal{M},F)\) mit \((\mathbb{S}^n,E)\) genau dann gerahmt, wenn \({\mathfrak{o}\left(F,\Psi\right)=0}\) gilt.
+    \end{lemma}
+    \begin{proof}
+        Sei \({(\mathcal{M}+\mathbb{S}^n,\overline{F})}\) zun\"achst gerahmt, sodass \(\overline{F}\) und \(F\) auf \({\mathcal{M}\setminus\Psi(\mathbb{S}^i\times\mathbf{0})}\) homotop sind. Der Rahmenwechsel von \(\overline{F}\) zu \(\dx\Psi(E)\) auf \(\Psi(\mathbb{S}^i\times\mathbb{S}^j)\) ist offenbar konstant, also ist der Rahmenwechsel von \(F\) zu \(\dx\Psi(E)\) auf \(\Psi(\mathbb{S}^i\times\mathbb{S}^j)\) nullhomotop. Es l\"asst sich leicht zeigen, dass dies genau dann der Fall ist, wenn eine nullhomotope Fortsetzung auf \({\Psi(\mathbb{S}^i\times\mathbb{D}^{j+1})\simeq\Psi(\mathbb{S}^i\times\mathbf{0})}\) existiert. Es folgt \({\mathfrak{o}\left(F,\Psi\right)=0}\).
+
+        Sei umgekehrt \({\mathfrak{o}\left(F,\Psi\right)=0}\), der Rahmenwechsel von \(F\) zu \(\dx\Psi(E)\) auf der Anklebesph\"are sei also nullhomotop. Da diese ein Deformationsretrakt von \(\im\Psi\) ist, ist auch der Rahmenwechsel auf \(\im\Psi\) nullhomotop. Eine Nullhomotopie \({\im\Psi\times\mathbb{I}\to\operatorname{GL}^+(n+1)}\) zu der Identit\"at kann mithilfe der Homotopie\-er\-wei\-te\-rungs\-ei\-gen\-schaft zu einer Homotopie \({H\colon\mathcal{M}\times\mathbb{I}\to\operatorname{GL}^+(n+1)}\) fortgesetzt werden. Dann ist durch \({\overline{F}(p):=H(p,1)\cdot F(p)}\) eine Rahmung von \(\mathcal{M}\) definiert, die einerseits zu \(F\) homotop ist, und andererseits auf \(\im\Psi\) mit \(\dx\Psi(E)\) \"uber\-ein\-stimmt. Zusammen mit \(E\) induziert \(\overline{F}\) eine Rahmung auf \(\mathcal{M}+\mathbb{S}^n\).
+    \end{proof}
+    Sei \({n=i+j+1}\), \(\mathcal{M}\) eine Mannigfaltigkeit und \(\Psi\colon\underline{\mathbb{D}}^{j+1}\hookrightarrow\mathring{\mathcal{M}}\) eine Anklebe\-ein\-bet\-tung. Zu einer glatten Funktion \(\gamma\colon\mathbb{S}^{i-1}\to\operatorname{SO}(j+1)\) l\"asst sich der Vektorb\"undel\-auto\-mor\-phis\-mus
+    \[\Gamma\colon\underline{\mathbb{D}}^{j+1}\to\underline{\mathbb{D}}^{j+1},\,(x,y)\mapsto\left(x,\gamma(x)\cdot y\right)\]
+    definieren. Dann l\"asst sich die reparametrisierte Chirurgie mithilfe von \(\Psi\Gamma\) bilden. Besonders interessant ist hierbei der Effekt einer Reparametrisierung auf die Obstruktion der stabilen Parallelisierbarkeit. In folgendem Lemma bezeichne \(S^k\colon\operatorname{SO}(m)\to\operatorname{SO}(m+k)\) die \(k\)-fach iterierte Einh\"angung.
+    \begin{lemma}\label{lem:reparam_eq}
+        Sei \({n=i+j+1}\), \((\mathcal{M}^n,F)\) eine gerahmte Mannigfaltigkeit, \(\Psi\colon\underline{\mathbb{D}}^{j+1}\hookrightarrow\mathring{\mathcal{M}}\) eine Anklebeeinbettung und \(\gamma\colon\mathbb{S}^i\to\operatorname{SO}(j+1)\) glatt. Dann gilt die Gleichung
+        \begin{equation}\label{eq:reparam_eq}
+            \mathfrak{o}\left(F,\Psi\Gamma\right)=\mathfrak{o}\left(F,\Psi\right)+S_*^{i+1}\eqcl{\gamma}\in\pi_i\left(\operatorname{SO}(n+1)\right)\,.
+        \end{equation}
+    \end{lemma}
+    \begin{proof}
+        F\"ur das Differential
+        \[\dx_{(p,q)}\Gamma\colon T_{(p,q)}(\mathbb{S}^i\times\mathbb{D}^{j+1})\to T_{(p,q)}(\mathbb{S}^i\times\mathbb{D}^{j+1})\]
+        bez\"uglich der Standardbasis \((e_k)_{1\leq k\leq n}=E(p,q)\) gilt
+        \[J\Gamma(p,q)=M_{E(p,q)}^{E(p,q)}\left(\dx_{(p,q)}\Gamma\right)=\begin{pmatrix}
+            I_i & J\gamma(p)\cdot q\\
+            0 & \gamma(p)
+        \end{pmatrix}\in\operatorname{GL}^+(n)\,.\]
+        Folglich gilt \({J\Gamma(p,0)=S^i\gamma(p)\in\operatorname{SO}(n)}\). F\"ur \(p\in\mathbb{S}^i\) folgt
+        \begin{align*}
+            \sigma(F,\Psi\Gamma)(p)&\overeq{Def}M_{F(q)}^{E(p,0)}\left(S(\dx_{(p,0)}(\Psi\Gamma))\right)\\
+            &=M_{F(q)}^{E(p,0)}\left(S(\dx_{\Gamma(p,0)}\Psi)\circ S(\dx_{(p,0)}\Gamma)\right)\\
+            &=M_{F(q)}^{E(p,0)}\left(S(\dx_{(p,0)}\Psi)\right)\cdot M_{E(p,0)}^{E(p,0)}\left(S(\dx_{(p,0)}\Gamma)\right)\\
+            &=\sigma(F,\Psi)(p)\cdot S\left(J\Gamma(p,0)\right)\\
+            &=\sigma(F,\Psi)(p)\cdot S^{i+1}\gamma(p)\,.
+        \end{align*}
+        Dies zeigt \(\mathfrak{o}\left(F,\Psi\Gamma\right)=\mathfrak{o}\left(F,\Psi\right)+S_*^{i+1}\eqcl{\gamma}\).
+    \end{proof}
+    Insbesondere hat Reparametrisierung mit \(\eqcl{\gamma}\in\ker S_*^{i+1}\) keine Auswirkung auf stabile Parallelisierbarkeit.
+    \newpage
+    \begin{theorem}\label{thm:surg_framable}
+        Sei \(n=i+j+1\), \((\mathcal{M}^n,F)\) eine gerahmte Mannigfaltigkeit und \(\mathcal{S}^i\) eine eingebettete Sph\"are mit trivialem Normalenb\"undel. Gilt \(i\leq j\), l\"asst sich an \(\mathcal{S}\) eine gerahmte Chirurgie durch\-f\"uh\-ren.
+    \end{theorem}
+    \begin{proof}
+        Sei \(\Psi\colon\underline{\mathbb{D}}^{j+1}\to\mathring{\mathcal{M}}\) eine beliebige Anklebeabbildung, sodass die Obstruktion \(\mathfrak{o}(F,\Psi)\in\pi_i\left(\operatorname{SO}(n+1)\right)\) definiert ist. Aus der Annahme folgt, dass der von der \(i\)-fach iterierten Einh\"angung induzierte Homomorphismus
+        \[S_*^{i+1}\colon\pi_i\left(\operatorname{SO}(j+1)\right)\to\pi_i\left(\operatorname{SO}(n+1)\right)\]
+        surjektiv ist, es existiert also ein \(\eqcl{\gamma}\in\pi_i\left(\operatorname{SO}(j+1)\right)\) mit einem glatten Re\-pr\"a\-sen\-tan\-ten \(\gamma\), sodass f\"ur die Reparametrisierung \(\Gamma\) gem\"a\ss{} Lemma \ref{lem:reparam_eq}
+        \[\mathfrak{o}\left(F,\Psi\Gamma\right)=\mathfrak{o}\left(F,\Psi\right)+S_*^{i+1}\eqcl{\gamma}=0\]
+        gilt. Gem\"a\ss{} Lemma \ref{lem:nullhom_frame} ist eine Chirurgie an \(\mathcal{S}\) mittels \(\Psi\Gamma\) gerahmt.
+    \end{proof}
+
+    \begin{theorem}\label{thm:srg_conn}
+        Eine gerahmte Mannigfaltigkeit \((\mathcal{M}^n,F)\) mit \({n\geq2k}\) ist zu einer \({(k-1)}\)-zu\-sam\-men\-h\"angen\-den gerahmten Mannigfaltigkeit \(\chi\)-\"aquivalent.
+    \end{theorem}
+    \begin{proof}
+        Es wird Induktion \"uber \(k\) gef\"uhrt. Durch \(0\)-Chirurgie kann \(\mathcal{M}\) als zusammenh\"angend angenommen werden. Sei \(\mathcal{M}\) nun bereits \((k-2)\)-zusammen\-h\"angend. Dann kann ein beliebiges Element in \(\pi_{k-1}(\mathcal{M})\) durch eine Einbettung \(\mathbb{S}^{k-1}\hookrightarrow\mathcal{M}\) repr\"asentiert werden. Da die Bildsph\"are wegen Satz \ref{thm:vec_dim_triv} ein triviales Normalenb\"undel besitzt, kann Chirurgie an ihr durchgef\"uhrt werden. Mithilfe von Satz \ref{thm:surg_framable} ergibt dies erneut eine gerahmte Mannigfaltigkeit \(\mathcal{M}^{\prime}\). Wegen Lemma \ref{lem:fund_smaller} ist \(\pi(\mathcal{M}^{\prime})\) echt kleiner als \(\pi(\mathcal{M})\). Endlich viele Schritte f\"uhren zu einer \((k-1)\)-zusammen\-h\"angen\-den Mannigfaltigkeit.
+    \end{proof}
+
+\subsection{Gerahmte Henkel}
+    Die vorangegangenen S\"atze gelten in \"ahnlicher Art und Weise, wenn mit Henkeln anstatt mit Chirurgie gearbeitet wird. Ein zu Lemma \ref{lem:nullhom_frame} nahezu analoger Beweis ergibt:
+    \begin{lemma}
+        Sei \((\mathcal{W},F)\) eine gerahmte Mannigfaltigkeit und \(\Psi\colon\underline{\mathbb{D}}^{j+1}\hookrightarrow\partial\mathcal{W}\) eine An\-kle\-be\-ein\-bet\-tung und \(\tilde{\Psi}\colon\underline{\mathbb{D}}^{j+1}\hookrightarrow\mathcal{W}\) eine Fortsetzung. Dann ist die Verklebung von \((\mathcal{W},F)\) mit \((\mathbb{D}^n,E)\) genau dann rahmbar, wenn \({\mathfrak{o}\left(F|_{\partial\mathcal{W}},\Psi\right)=0}\) gilt.
+    \end{lemma}
+    Die Obstruktionen der Rahmbarkeit von \(\mathcal{W}\multimap\mathbb{D}^{i+1}\) und \(\partial\mathcal{W}\multimap\mathbb{S}^i\) stimmen also \"uberein. Eine Reparametrisierung ist nun eine Abbildung
+    \[\tilde{\Gamma}\colon\underline{\mathbb{D}}^j\times\mathbb{R}_+\to\underline{\mathbb{D}}^j\times\mathbb{R}_+,\,(x,y,t)\mapsto\left(x,\gamma(x)\cdot y,t\right)\,,\]
+    und setzt damit die Reparametrisierung der Chirurgie an \(\partial\mathcal{W}\) trivial fort. F\"ur das folgende ist noch folgendes Lemma wichtig.
+    \begin{lemma}\label{lem:smoothing_pi}
+        Zu einer gerahmten Mannigfaltigkeit \(\mathcal{M}^n\) und \({i\leq j}\) existiert eine gerahmte Man\-nig\-faltig\-keit \(\mathcal{W}^{n+1}\) mit
+        \[\partial\mathcal{W}\cong\mathcal{M}\mathop{+}^{\partial\mathcal{M}}\left(\mathcal{M}\multimap\mathbb{S}^i\right)\,.\]
+    \end{lemma}
+    \begin{proof}
+        Sei \(\mathcal{W}\subseteq\mathcal{M}\times\mathbb{I}\) mit 
+        \[\partial\mathcal{W}\cong\mathcal{M}\mathop{+}^{\partial\mathcal{M}}\mathcal{M}\,.\]
+        gem\"a\ss{} Lemma \ref{lem:smooth_man}. Da die stabile Rahmung von \(\mathcal{M}\) eine Rahmung von \({\mathcal{M}\times\mathbb{R}}\) induziert, induziert diese auch eine Rahmung von \(\mathcal{W}\). Wegen \(i\leq j\) kann an \(\mathcal{W}\) derart ein gerahmter Henkel angebracht werden, dass die resultierende Mannigfaltigkeit dem Lemma  gen\"ugt.
+    \end{proof}

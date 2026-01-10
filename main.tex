@@ -22,8 +22,6 @@
 \usepackage{csquotes}
 \usepackage{mleftright} % Fix left/right formatting
 \usepackage{xcolor}
-\usepackage[style=alphabetic]{biblatex}
-\bibliography{sources.bib}
 
 \definecolor{darkgreen}{RGB}{0, 100, 0}
 
@@ -157,10 +155,12 @@
 
     \appendix
     
+    \bibliographystyle{plain}
+    \bibliography{sources}
+    
     \chapter*{Appendix}
     \refstepcounter{chapter}
     \addcontentsline{toc}{chapter}{Appendix}
-    
+
     \input{Kapitel/Appendix}
-    \printbibliography
 \end{document}

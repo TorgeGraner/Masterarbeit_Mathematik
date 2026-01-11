@@ -155,12 +155,13 @@
 
     \appendix
     
-    \bibliographystyle{plain}
+    \addcontentsline{toc}{chapter}{Literaturverzeichnis}
+    \bibliographystyle{alpha}
     \bibliography{sources}
     
+    \addcontentsline{toc}{chapter}{Appendix}
     \chapter*{Appendix}
     \refstepcounter{chapter}
-    \addcontentsline{toc}{chapter}{Appendix}
 
     \input{Kapitel/Appendix}
 \end{document}
